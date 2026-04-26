@@ -1,0 +1,2166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exhibit at GITW 2026 — Africa Build Show & Megawatt Africa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,900;1,700&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ════════════════════════════════════
+   GHANA FLAG  ·  LIGHT & BOLD THEME
+   Red #CE1126 · Gold #FCD116 · Green #006B3F
+   ════════════════════════════════════ */
+      :root {
+        --red: #ce1126;
+        --red-dk: #a50e1e;
+        --red-lt: #f5e6e8;
+        --gold: #fcd116;
+        --gold-dk: #c9a700;
+        --gold-lt: #fff7cc;
+        --gold-pale: #fffae8;
+        --green: #006b3f;
+        --green-dk: #004d2c;
+        --green-lt: #e0f2ea;
+        --black: #111111;
+        --ink: #1e1e1e;
+        --ink-2: #3a3a3a;
+        --ink-3: #666666;
+        --ink-4: #999999;
+        --white: #ffffff;
+        --off-white: #fafaf8;
+        --surface: #f4f2ec;
+        --border: #e4e2da;
+        --border-dk: #d0cec4;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Barlow", sans-serif;
+        background: var(--white);
+        color: var(--ink);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* ── GHANA 3-STRIPE ── */
+      .stripe {
+        display: flex;
+        height: 6px;
+      }
+      .stripe .r {
+        flex: 1;
+        background: var(--red);
+      }
+      .stripe .g {
+        flex: 1;
+        background: var(--gold);
+      }
+      .stripe .n {
+        flex: 1;
+        background: var(--green);
+      }
+
+      /* ── STAR ── */
+      .star {
+        display: inline-block;
+        clip-path: polygon(
+          50% 0%,
+          61% 35%,
+          98% 35%,
+          68% 57%,
+          79% 91%,
+          50% 70%,
+          21% 91%,
+          32% 57%,
+          2% 35%,
+          39% 35%
+        );
+      }
+      .star-gold {
+        background: var(--gold);
+      }
+      .star-red {
+        background: var(--red);
+      }
+      .star-green {
+        background: var(--green);
+      }
+      .star-white {
+        background: var(--white);
+      }
+      .star-black {
+        background: var(--black);
+      }
+      .star-sm {
+        width: 14px;
+        height: 14px;
+      }
+      .star-md {
+        width: 22px;
+        height: 22px;
+      }
+
+      /* ── EYEBROW ── */
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        margin-bottom: 14px;
+      }
+      .eyebrow::before {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 2px;
+      }
+      .ey-red {
+        color: var(--red);
+      }
+      .ey-red::before {
+        background: var(--red);
+      }
+      .ey-gold {
+        color: var(--gold-dk);
+      }
+      .ey-gold::before {
+        background: var(--gold);
+      }
+      .ey-green {
+        color: var(--green);
+      }
+      .ey-green::before {
+        background: var(--green);
+      }
+      .ey-white {
+        color: rgba(255, 255, 255, 0.7);
+      }
+      .ey-white::before {
+        background: rgba(255, 255, 255, 0.5);
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Barlow Condensed", sans-serif;
+        text-transform: uppercase;
+        line-height: 0.96;
+      }
+
+      /* ════ NAV ════ */
+  nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  transition: box-shadow 0.3s;
+  height: auto;
+  min-height: 80px; /* Match the nav-inner height */
+}
+
+.nav-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px; /* Increase from 120px to 140px */
+  gap: 15px;
+ 
+}
+
+ .nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 80px; /* Ensure minimum height for logos */
+}
+/* Add styles for logo items */
+.nav-logo-item img {
+  max-height: 100px; /* Increase from 80px to 100px */
+  width: auto;
+  object-fit: contain;
+  height: auto;
+}
+/* Set consistent image sizing */
+.nav-logo-item img {
+  max-height: 80px;  /* Reduce from 160px to 80px for better proportion */
+  width: auto;
+  object-fit: contain;
+}
+
+
+/* Style separators between logos */
+.nav-separator {
+  width: 1px;
+  height: 24px;
+  background: var(--border);
+  margin: 0 8px;
+}
+      .nav-bar {
+        width: 4px;
+        height: 24px;
+        border-radius: 2px;
+        background: linear-gradient(
+          to bottom,
+          var(--red),
+          var(--gold),
+          var(--green)
+        );
+      }
+      .nav-logo .acc {
+        color: var(--red);
+      }
+     .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 18px; /* Reduced gap between links */
+  list-style: none;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+      .nav-links a {
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--ink-3);
+        transition: color 0.2s;
+      }
+      .nav-links a:hover {
+        color: var(--red);
+      }
+      .btn-nav {
+        background: var(--gold);
+        color: var(--black);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 10px 22px;
+        border-radius: 3px;
+        transition:
+          background 0.2s,
+          transform 0.15s;
+        display: inline-block;
+        border: 1px solid var(--gold-dk);
+      }
+      .btn-nav:hover {
+        background: var(--gold-dk);
+        color: var(--white);
+        transform: translateY(-1px);
+      }
+      .btn-nav-ghost {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 10px 22px;
+        border-radius: 3px;
+        display: inline-block;
+        border: 2px solid var(--green);
+        color: var(--green);
+        transition:
+          background 0.2s,
+          color 0.2s,
+          transform 0.15s;
+      }
+      .btn-nav-ghost:hover {
+        background: var(--green);
+        color: var(--white);
+        transform: translateY(-1px);
+      }
+
+      /* Responsive adjustments */
+@media (max-width: 1024px) {
+  .nav-inner { padding: 0 20px; }
+  .nav-links { gap: 12px; }
+  .btn-nav, .btn-nav-ghost { 
+    font-size: 9px; 
+    padding: 7px 12px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-inner { 
+    padding: 0 15px; 
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+  }
+  .nav-links { 
+    order: 2; /* Move links below logo on mobile */
+    width: 100%;
+    justify-content: center;
+    margin-top: 5px;
+  }
+  .nav-logo { order: 1; }
+}
+
+      /* ════ HERO ════ */
+      .hero {
+        min-height: 100vh;
+        background: var(--black);
+        position: relative;
+        overflow: hidden;
+        padding-top: 62px;
+        display: flex;
+        flex-direction: column;
+      }
+      .hero-tint {
+        display: none;
+      }
+      .hero-star-wm {
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 340px;
+        height: 340px;
+        z-index: 1;
+        pointer-events: none;
+        clip-path: polygon(
+          50% 0%,
+          61% 35%,
+          98% 35%,
+          68% 57%,
+          79% 91%,
+          50% 70%,
+          21% 91%,
+          32% 57%,
+          2% 35%,
+          39% 35%
+        );
+        background: var(--gold);
+        opacity: 0.06;
+      }
+
+      /* ══ IMAGE STYLES ══ */
+      .hero-bg-image {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+      }
+      .hero-bg-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 20%;
+      }
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.45) 0%,
+          rgba(0, 0, 0, 0.1) 30%,
+          rgba(0, 0, 0, 0.05) 50%,
+          rgba(0, 0, 0, 0.3) 75%,
+          rgba(0, 0, 0, 0.6) 100%
+        );
+        z-index: 1;
+      }
+
+      .hero-body {
+        position: relative;
+        z-index: 2;
+        flex: 1;
+        max-width: 1160px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 28px;
+        min-height: calc(100vh - 62px - 72px);
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Top row: split headline */
+      .hero-headlines {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        padding-top: 36px;
+      }
+      .hero-h1-left {
+        font-size: clamp(38px, 5vw, 64px);
+        font-weight: 900;
+        color: var(--white);
+        letter-spacing: -0.01em;
+        text-shadow:
+          0 2px 16px rgba(0, 0, 0, 0.5),
+          0 1px 3px rgba(0, 0, 0, 0.3);
+      }
+      .hero-h1-right {
+        font-size: clamp(38px, 5vw, 64px);
+        font-weight: 900;
+        color: var(--gold);
+        letter-spacing: -0.01em;
+        text-align: right;
+        text-shadow:
+          0 2px 16px rgba(0, 0, 0, 0.5),
+          0 1px 3px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Tag + paragraph — lowered further below headlines, just above center figures */
+      .hero-upper {
+        text-align: center;
+        margin-top: 80px;
+      }
+      .hero-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--red);
+        color: var(--white);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        padding: 7px 14px;
+        border-radius: 2px;
+        width: fit-content;
+      }
+      .hero-mid {
+        text-align: center;
+        margin-top: 8px;
+      }
+      .hero-p {
+        font-size: 16px;
+        color: var(--white);
+        line-height: 1.6;
+        max-width: 540px;
+        margin: 0 auto;
+        text-shadow:
+          0 1px 10px rgba(0, 0, 0, 0.6),
+          0 1px 3px rgba(0, 0, 0, 0.4);
+        font-weight: 500;
+      }
+
+      /* CTA + stat boxes — pushed to bottom */
+      .hero-lower {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding-bottom: 20px;
+      }
+      .hero-cta-row {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+      }
+
+      /* Stat boxes centered below CTA */
+      .hero-right {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .hero-stat-box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.55);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 6px;
+        padding: 10px 14px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+      .hero-stat-num {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 20px;
+        font-weight: 900;
+        color: var(--ink);
+        line-height: 1;
+      }
+      .hero-stat-num .hl-r {
+        color: var(--red);
+      }
+      .hero-stat-num .hl-g {
+        color: var(--green);
+      }
+      .hero-stat-num .hl-y {
+        color: var(--gold-dk);
+      }
+      .hero-stat-lbl {
+        font-size: 9px;
+        color: var(--ink-3);
+        letter-spacing: 0.04em;
+        line-height: 1.2;
+      }
+
+      .btn-hero-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--gold);
+        color: var(--black);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 16px 30px;
+        border-radius: 3px;
+        border: 1px solid var(--gold-dk);
+        transition:
+          background 0.2s,
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .btn-hero-primary:hover {
+        background: var(--gold-dk);
+        color: var(--white);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 28px rgba(200, 160, 0, 0.25);
+      }
+      .btn-hero-ghost {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: transparent;
+        color: var(--white);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 15px 28px;
+        border-radius: 3px;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        transition:
+          border-color 0.2s,
+          color 0.2s;
+      }
+      .btn-hero-ghost:hover {
+        border-color: var(--gold);
+        color: var(--gold);
+      }
+      .btn-hero-green {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--green);
+        color: var(--white);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 16px 30px;
+        border-radius: 3px;
+        border: 1px solid var(--green-dk);
+        transition:
+          background 0.2s,
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .btn-hero-green:hover {
+        background: var(--green-dk);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 28px rgba(0, 107, 63, 0.25);
+      }
+
+      .hero-stats-bar {
+        position: relative;
+        z-index: 2;
+        background: var(--ink);
+        color: var(--white);
+        flex-shrink: 0;
+      }
+      .hero-stats-inner {
+        max-width: 1160px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .hs {
+        padding: 18px 24px;
+        border-right: 1px solid rgba(255, 255, 255, 0.08);
+        text-align: center;
+      }
+      .hs:last-child {
+        border-right: none;
+      }
+      .hs-num {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 26px;
+        font-weight: 900;
+        line-height: 1;
+      }
+      .hs-lbl {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.5);
+        margin-top: 3px;
+      }
+
+      /* ════ COMPETITOR STRIP ════ */
+      .competitor-strip {
+        background: var(--red);
+        padding: 16px 28px;
+        text-align: center;
+      }
+      .competitor-strip-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: clamp(14px, 1.8vw, 20px);
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--white);
+      }
+      .flag-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .flag-chip img {
+        width: 28px;
+        height: 20px;
+        border-radius: 2px;
+        object-fit: cover;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+      }
+      .flag-sep {
+        opacity: 0.4;
+      }
+
+      /* ════ FLAG BAR ════ */
+      .flag-bar {
+        background: var(--white);
+        padding: 18px 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+        flex-wrap: wrap;
+      }
+      .flag-bar img {
+        width: 48px;
+        height: 34px;
+        border-radius: 3px;
+        object-fit: cover;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+        transition: transform 0.2s;
+        cursor: default;
+      }
+      .flag-bar img:hover {
+        transform: scale(1.15);
+      }
+
+      /* ════ COMMON ════ */
+      .container {
+        max-width: 1160px;
+        margin: 0 auto;
+        padding: 0 28px;
+      }
+      section {
+        padding: 96px 0;
+      }
+      .sec-white {
+        background: var(--white);
+      }
+      .sec-surface {
+        background: var(--surface);
+      }
+      .sec-gold {
+        background: var(--gold-pale);
+      }
+      .sec-green {
+        background: var(--green);
+      }
+      .sec-red {
+        background: var(--red);
+      }
+      .section-header {
+        max-width: 640px;
+        margin-bottom: 52px;
+      }
+      .section-header h2 {
+        font-size: clamp(36px, 5vw, 52px);
+        font-weight: 900;
+        color: var(--ink);
+        margin-bottom: 16px;
+      }
+      .section-header p {
+        font-size: 16px;
+        color: var(--ink-3);
+        line-height: 1.7;
+      }
+
+      /* ════ WHY EXHIBIT ════ */
+      .why-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 20px;
+      }
+      .why-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 36px 30px;
+        transition:
+          transform 0.25s,
+          box-shadow 0.25s;
+        position: relative;
+        overflow: hidden;
+      }
+      .why-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--red), var(--gold));
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+      .why-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+      }
+      .why-card:hover::before {
+        opacity: 1;
+      }
+      .why-card-num {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 52px;
+        font-weight: 900;
+        color: rgba(252, 209, 22, 0.2);
+        position: absolute;
+        top: 16px;
+        right: 20px;
+        line-height: 1;
+      }
+      .why-card h3 {
+        font-size: 22px;
+        font-weight: 900;
+        color: var(--ink);
+        margin-bottom: 10px;
+        line-height: 1.1;
+      }
+      .why-card p {
+        font-size: 14px;
+        color: var(--ink-3);
+        line-height: 1.6;
+      }
+
+      /* ══ WHY IMAGE BANNER ══ */
+      .why-image-banner {
+        margin-top: 48px;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+      }
+      .why-image-banner img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+      }
+
+      /* ════ POWER PLAYERS SPLIT ════ */
+      .power-section {
+        background: var(--surface);
+        padding: 96px 0;
+        overflow: hidden;
+      }
+      .power-split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        align-items: center;
+        max-width: 1160px;
+        margin: 0 auto;
+        padding: 0 28px;
+      }
+      .power-text h2 {
+        font-size: clamp(36px, 5vw, 52px);
+        font-weight: 900;
+        color: var(--ink);
+        margin-bottom: 20px;
+      }
+      .power-text h2 .gold {
+        color: var(--gold-dk);
+      }
+      .power-text p {
+        font-size: 16px;
+        color: var(--ink-3);
+        line-height: 1.7;
+        margin-bottom: 24px;
+      }
+      .power-image {
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+      }
+      .power-image img {
+        width: 100%;
+        height: 100%;
+        min-height: 380px;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+      }
+
+      /* ════ MARKET NUMBERS ════ */
+      .market-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+        margin-bottom: 48px;
+      }
+      .market-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 28px 24px;
+        text-align: center;
+        transition:
+          transform 0.25s,
+          box-shadow 0.25s;
+        border-top: 4px solid var(--gold);
+      }
+      .market-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+      }
+      .market-card-val {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 44px;
+        font-weight: 900;
+        color: var(--gold-dk);
+        line-height: 1;
+      }
+      .market-card-unit {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--gold-dk);
+        margin-bottom: 8px;
+      }
+      .market-card-desc {
+        font-size: 13px;
+        color: var(--ink-3);
+        line-height: 1.4;
+      }
+
+      /* ══ Market Image Split ══ */
+      .market-split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin-bottom: 48px;
+      }
+      .market-image-card {
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+      }
+      .market-image-card img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+      }
+
+      /* ════ INCENTIVE SALES ANGLE ════ */
+      .incentive-pitch {
+        max-width: 780px;
+        background: var(--white);
+        border: 1px solid var(--border-dk);
+        border-radius: 10px;
+        padding: 48px 40px;
+        position: relative;
+        overflow: hidden;
+      }
+      .incentive-pitch::before {
+        content: '"';
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 180px;
+        font-weight: 900;
+        color: rgba(252, 209, 22, 0.12);
+        pointer-events: none;
+        line-height: 1;
+      }
+      .incentive-pitch h3 {
+        font-size: 26px;
+        font-weight: 900;
+        color: var(--ink);
+        margin-bottom: 18px;
+        position: relative;
+        line-height: 1.05;
+      }
+      .incentive-pitch p {
+        font-size: 16px;
+        color: var(--ink-2);
+        line-height: 1.7;
+        margin-bottom: 14px;
+        position: relative;
+      }
+      .incentive-list {
+        list-style: none;
+        margin: 24px 0;
+        position: relative;
+      }
+      .incentive-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border);
+        font-size: 15px;
+        color: var(--ink-2);
+        line-height: 1.5;
+      }
+      .incentive-list li:last-child {
+        border-bottom: none;
+      }
+      .il-val {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 24px;
+        font-weight: 900;
+        color: var(--green);
+        min-width: 70px;
+        flex-shrink: 0;
+      }
+
+      /* ════ BUYER PROFILE ════ */
+      .buyer-cols {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        max-width: 1000px;
+      }
+      .buyer-col h3 {
+        font-size: 22px;
+        font-weight: 900;
+        margin-bottom: 18px;
+        padding-bottom: 12px;
+        border-bottom: 3px solid var(--gold);
+        display: inline-block;
+        color: var(--ink);
+      }
+      .buyer-col.mega h3 {
+        border-color: var(--green);
+      }
+      .buyer-list {
+        list-style: none;
+      }
+      .buyer-list li {
+        font-size: 14px;
+        color: var(--ink-2);
+        padding: 8px 0 8px 16px;
+        border-left: 2px solid var(--border);
+        margin-left: 4px;
+        transition: all 0.2s;
+      }
+      .buyer-list li:hover {
+        border-left-color: var(--gold);
+        color: var(--ink);
+        padding-left: 20px;
+      }
+      .buyer-col.mega .buyer-list li:hover {
+        border-left-color: var(--green);
+      }
+
+      /* ════ COUNTRIES ════ */
+      .country-flags {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        max-width: 900px;
+      }
+      .country-chip {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 14px 22px;
+        font-size: 14px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.2s;
+        color: var(--ink-2);
+      }
+      .country-chip:hover {
+        border-color: var(--gold);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+      }
+      .country-chip .cflag {
+        font-size: 22px;
+      }
+
+      /* ════ BOOTH PACKAGES ════ */
+      .booth-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        max-width: 1000px;
+      }
+      .booth-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 36px 30px;
+        transition: all 0.25s;
+      }
+      .booth-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+      }
+      .booth-card.featured {
+        border-color: var(--gold);
+        border-top: 4px solid var(--gold);
+        background: var(--gold-pale);
+      }
+      .booth-card-type {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 22px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: var(--ink);
+        margin-bottom: 18px;
+      }
+      .booth-card ul {
+        list-style: none;
+      }
+      .booth-card li {
+        font-size: 13px;
+        color: var(--ink-2);
+        padding: 7px 0;
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .booth-card li::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--gold);
+        flex-shrink: 0;
+      }
+      .booth-card li:last-child {
+        border-bottom: none;
+      }
+      .booth-card.featured li::before {
+        background: var(--gold-dk);
+      }
+      .booth-card-cta {
+        display: block;
+        text-align: center;
+        margin-top: 24px;
+        padding: 12px 0;
+        border: 2px solid var(--ink);
+        border-radius: 4px;
+        color: var(--ink);
+        font-weight: 700;
+        font-size: 13px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        transition: all 0.2s;
+      }
+      .booth-card-cta:hover {
+        background: var(--ink);
+        color: var(--gold);
+      }
+      .booth-card.featured .booth-card-cta {
+        background: var(--gold);
+        border-color: var(--gold-dk);
+        color: var(--black);
+      }
+      .booth-card.featured .booth-card-cta:hover {
+        background: var(--gold-dk);
+        color: var(--white);
+      }
+
+      /* ══ Booth Image ══ */
+      .booth-image-banner {
+        margin-top: 48px;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+      }
+      .booth-image-banner img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+      }
+
+      /* ════ CTA FINAL ════ */
+      .sec-cta {
+        background: var(--black);
+        padding: 96px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .sec-cta .cta-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+      }
+      .sec-cta .cta-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      .sec-cta .cta-overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.45) 0%,
+          rgba(0, 0, 0, 0.1) 30%,
+          rgba(0, 0, 0, 0.05) 50%,
+          rgba(0, 0, 0, 0.3) 75%,
+          rgba(0, 0, 0, 0.6) 100%
+        );
+      }
+      .sec-cta::before {
+        content: "";
+        position: absolute;
+        left: -80px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 280px;
+        height: 280px;
+        clip-path: polygon(
+          50% 0%,
+          61% 35%,
+          98% 35%,
+          68% 57%,
+          79% 91%,
+          50% 70%,
+          21% 91%,
+          32% 57%,
+          2% 35%,
+          39% 35%
+        );
+        background: var(--gold);
+        opacity: 0.06;
+        z-index: 2;
+      }
+      .sec-cta::after {
+        content: "";
+        position: absolute;
+        right: -60px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 220px;
+        height: 220px;
+        clip-path: polygon(
+          50% 0%,
+          61% 35%,
+          98% 35%,
+          68% 57%,
+          79% 91%,
+          50% 70%,
+          21% 91%,
+          32% 57%,
+          2% 35%,
+          39% 35%
+        );
+        background: var(--gold);
+        opacity: 0.04;
+        z-index: 2;
+      }
+      .sec-cta .container {
+        position: relative;
+        z-index: 3;
+      }
+      .sec-cta h2 {
+        font-size: clamp(36px, 5vw, 64px);
+        font-weight: 900;
+        color: var(--white);
+        margin-bottom: 14px;
+        max-width: 760px;
+        margin-left: auto;
+        margin-right: auto;
+        text-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
+      }
+      .sec-cta h2 .red {
+        color: var(--red);
+      }
+      .sec-cta p {
+        font-size: 17px;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 36px;
+        max-width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+        text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+      }
+      .cta-btns {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+      }
+      .btn-cta-a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--red);
+        color: var(--white);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 16px 34px;
+        border-radius: 3px;
+        transition:
+          background 0.2s,
+          transform 0.2s;
+      }
+      .btn-cta-a:hover {
+        background: var(--red-dk);
+        transform: translateY(-2px);
+      }
+      .btn-cta-b {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: transparent;
+        color: var(--white);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 15px 28px;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        border-radius: 3px;
+        transition:
+          border-color 0.2s,
+          color 0.2s;
+      }
+      .btn-cta-b:hover {
+        border-color: var(--gold);
+        color: var(--gold);
+      }
+      .btn-cta-green {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--green);
+        color: var(--white);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 16px 34px;
+        border-radius: 3px;
+        border: 1px solid var(--green-dk);
+        transition:
+          background 0.2s,
+          transform 0.2s;
+      }
+      .btn-cta-green:hover {
+        background: var(--green-dk);
+        transform: translateY(-2px);
+      }
+
+      /* ════ CONTACT CARDS ════ */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        max-width: 620px;
+        margin: 0 auto;
+        text-align: left;
+      }
+      .contact-card {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 8px;
+        padding: 22px 24px;
+        backdrop-filter: blur(8px);
+      }
+      .cc-label {
+        font-size: 10px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.4);
+        margin-bottom: 8px;
+        font-weight: 700;
+      }
+      .cc-name {
+        font-weight: 700;
+        font-size: 15px;
+        color: var(--white);
+        margin-bottom: 2px;
+      }
+      .cc-role {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 8px;
+      }
+      .cc-detail {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.4);
+        line-height: 1.6;
+      }
+      .cc-detail a {
+        color: var(--gold);
+        font-weight: 600;
+      }
+
+      /* ════ FOOTER ════ */
+      footer {
+        background: var(--ink);
+        padding: 48px 0;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 12px;
+      }
+      footer p {
+        margin-bottom: 6px;
+      }
+      footer a {
+        color: rgba(255, 255, 255, 0.6);
+        transition: color 0.2s;
+      }
+      footer a:hover {
+        color: var(--gold);
+      }
+ .footer-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  margin: 0 auto 14px;
+  gap: 0; /* Remove gap completely */
+}
+
+.footer-bar img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  margin: 0; /* Remove any default margins */
+  padding: 0; /* Remove any default padding */
+  box-sizing: border-box; /* Ensure proper sizing */
+}
+
+      /* ════ ANIMATIONS ════ */
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .d1 {
+        transition-delay: 0.1s;
+      }
+      .d2 {
+        transition-delay: 0.2s;
+      }
+      .d3 {
+        transition-delay: 0.3s;
+      }
+
+      /* ════ RESPONSIVE ════ */
+      @media (max-width: 900px) {
+        .hero-headlines {
+          flex-direction: column;
+          gap: 8px;
+        }
+        .hero-h1-right {
+          text-align: left;
+        }
+        .hero-right {
+          flex-wrap: wrap;
+        }
+        .power-split {
+          grid-template-columns: 1fr;
+        }
+        .market-split {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 768px) {
+        .buyer-cols {
+          grid-template-columns: 1fr;
+        }
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-stats-inner {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .nav-links {
+          gap: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav id="nav">
+      <div class="nav-inner">
+        <div class="nav-logo">
+          <div class="nav-logo-item">
+            <a href="https://reg.meetby.net/gitwghana2026-visitor">
+  <img src="GITW-logo.png" alt="GITW 2026" />
+</a>
+          </div>
+         
+          <div class="nav-logo-item">
+            <a href="https://reg.meetby.net/absghana2026-visitor">
+              <img src="africabuildshow-logo.png" alt="Africa Build Show" />
+            </a>
+          </div>
+
+          <div class="nav-logo-item">
+            <a href="https://reg.meetby.net/megawattghana2026-visitor">
+              <img src="Megawatt-logo.png" alt="Megawatt Africa" />
+            </a>
+          </div>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#why">Why Exhibit</a></li>
+          <li><a href="#market">Market</a></li>
+          <li><a href="#incentives">Incentives</a></li>
+          <li><a href="#booths">Stand Options</a></li>
+          <li>
+            <a
+              href="https://reg.meetby.net/absghana2026-exhibitor"
+              class="btn-nav"
+              >Book Your Stand →</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://reg.meetby.net/gitwghana2026-visitor"
+              class="btn-nav-ghost"
+              >Register to Attend</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════
+     HERO
+     ═══════════════════════════════════════ -->
+    <section class="hero">
+      <div class="hero-tint"></div>
+      <!-- ★ IMAGE PLACEHOLDER: HERO BACKGROUND ★ -->
+      <div class="hero-bg-image">
+        <img
+          src="Image-1.png"
+          alt="GITW 2026 — Boardroom and Accra skyline at dusk"
+        />
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-star-wm"></div>
+
+      <div class="hero-body">
+        <!-- Top: split headline across corners -->
+        <div class="hero-headlines">
+          <h1 class="hero-h1-left">The Deals Are<br />Being Made.</h1>
+          <h1 class="hero-h1-right">Your Seat<br />Is Empty.</h1>
+        </div>
+
+        <!-- Lowered tag just under star area -->
+        <div class="hero-upper">
+          <div class="hero-tag">
+            <span class="star star-gold star-sm"></span> Exhibitor Opportunities
+            — Limited Stands
+          </div>
+        </div>
+
+        <!-- Lowered paragraph — above center figure's head -->
+        <div class="hero-mid" style="margin-top: 15px">
+          <p class="hero-p">
+            Ghana's government ministers, infrastructure developers, and energy
+            buyers are gathering at one venue — July 7–9, 2026. The companies on
+            the floor are the ones signing contracts. The question isn't whether
+            to exhibit. It's whether you can afford not to.
+          </p>
+        </div>
+
+        <!-- CTA buttons below faces, stat boxes centered underneath -->
+        <div class="hero-lower">
+          <div class="hero-cta-row">
+            <a
+              href="https://reg.meetby.net/absghana2026-exhibitor"
+              class="btn-hero-primary"
+              ><span class="star star-black star-sm"></span> Book Your Stand
+              →</a
+            >
+            <a
+              href="https://reg.meetby.net/gitwghana2026-visitor"
+              class="btn-hero-green"
+              >Register to Attend</a
+            >
+            <a href="#" class="btn-hero-ghost">Download Exhibitor Prospectus</a>
+          </div>
+          <div class="hero-right">
+            <div class="hero-stat-box">
+              <div class="hero-stat-num"><span class="hl-y">$12.7B</span></div>
+              <div class="hero-stat-lbl">Construction<br />Market</div>
+            </div>
+            <div class="hero-stat-box">
+              <div class="hero-stat-num"><span class="hl-g">13%+</span></div>
+              <div class="hero-stat-lbl">Energy Demand<br />Growth</div>
+            </div>
+            <div class="hero-stat-box">
+              <div class="hero-stat-num"><span class="hl-r">200+</span></div>
+              <div class="hero-stat-lbl">B2B Meetings<br />Pre-Scheduled</div>
+            </div>
+            <div class="hero-stat-box">
+              <div class="hero-stat-num">1,500+</div>
+              <div class="hero-stat-lbl">Qualified<br />Delegates</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-stats-bar">
+        <div class="hero-stats-inner">
+          <div class="hs">
+            <div class="hs-num" style="color: var(--gold)">3</div>
+            <div class="hs-lbl">Co-Located Exhibitions</div>
+          </div>
+          <div class="hs">
+            <div class="hs-num" style="color: var(--white)">8</div>
+            <div class="hs-lbl">Country Pavilions Confirmed</div>
+          </div>
+          <div class="hs">
+            <div class="hs-num" style="color: var(--gold)">50%</div>
+            <div class="hs-lbl">CIT Rebate for Your Buyers</div>
+          </div>
+          <div class="hs">
+            <div class="hs-num" style="color: var(--white)">100%</div>
+            <div class="hs-lbl">Duty Waiver on Equipment</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPETITOR STRIP -->
+    <div class="competitor-strip">
+      <div class="competitor-strip-inner">
+        <span class="flag-chip"
+          ><img src="https://flagcdn.com/w40/cn.png" alt="China" />China</span
+        >
+        <span class="flag-sep">·</span>
+        <span class="flag-chip"
+          ><img src="https://flagcdn.com/w40/in.png" alt="India" />India</span
+        >
+        <span class="flag-sep">·</span>
+        <span class="flag-chip"
+          ><img src="https://flagcdn.com/w40/ae.png" alt="UAE" />UAE</span
+        >
+        <span class="flag-sep">·</span>
+        <span class="flag-chip"
+          ><img src="https://flagcdn.com/w40/tr.png" alt="Turkey" />Turkey</span
+        >
+        <span class="flag-sep">·</span>
+        <span class="flag-chip"
+          ><img src="https://flagcdn.com/w40/it.png" alt="Italy" />Italy</span
+        >
+        <span class="flag-sep">·</span>
+        <span class="flag-chip"
+          ><img src="https://flagcdn.com/w40/eg.png" alt="Egypt" />Egypt</span
+        >
+        <span class="flag-sep">·</span>
+        <span class="flag-chip"
+          ><img src="https://flagcdn.com/w40/ly.png" alt="Libya" />Libya</span
+        >
+        <span class="flag-sep">·</span>
+        <span class="flag-chip"
+          ><img src="https://flagcdn.com/w40/gh.png" alt="Ghana" />Ghana</span
+        >
+        <span style="opacity: 0.6; margin-left: 8px"
+          >— Country Pavilions Confirmed</span
+        >
+      </div>
+    </div>
+
+    <!-- FLAG BAR -->
+    <div class="flag-bar">
+      <img src="https://flagcdn.com/w80/cn.png" alt="China" />
+      <img src="https://flagcdn.com/w80/in.png" alt="India" />
+      <img src="https://flagcdn.com/w80/ae.png" alt="UAE" />
+      <img src="https://flagcdn.com/w80/tr.png" alt="Turkey" />
+      <img src="https://flagcdn.com/w80/it.png" alt="Italy" />
+      <img src="https://flagcdn.com/w80/eg.png" alt="Egypt" />
+      <img src="https://flagcdn.com/w80/ly.png" alt="Libya" />
+      <img src="https://flagcdn.com/w80/gh.png" alt="Ghana" />
+    </div>
+
+    <div class="stripe">
+      <div class="r"></div>
+      <div class="g"></div>
+      <div class="n"></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+     WHY EXHIBIT
+     ═══════════════════════════════════════ -->
+    <section class="sec-surface" id="why">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow ey-red">Why Exhibit</div>
+          <h2>A Booth Isn't Marketing.<br />It's A Positioning Play.</h2>
+          <p>
+            In West African markets, physical presence at the right event
+            signals you're serious, funded, and ready to do business. The
+            companies on the floor are the ones who get remembered when the
+            contract is awarded.
+          </p>
+        </div>
+        <div class="why-grid">
+          <div class="why-card reveal d1">
+            <div class="why-card-num">01</div>
+            <h3>The Right Buyers, Pre-Qualified</h3>
+            <p>
+              The visitors aren't casual browsers. They're contractors with
+              active infrastructure projects, developers backed by government
+              funding, IPP owners expanding generation capacity, and procurement
+              officials sourcing under the 24-Hour Economy programme.
+            </p>
+          </div>
+          <div class="why-card reveal d2">
+            <div class="why-card-num">02</div>
+            <h3>Triple Exhibition Traffic</h3>
+            <p>
+              Africa Build Show and Megawatt Africa are co-located with the GITW
+              Investment Summit. Your booth gets foot traffic from three
+              audiences: construction, energy, and government/investor delegates
+              — all in the same building.
+            </p>
+          </div>
+          <div class="why-card reveal d3">
+            <div class="why-card-num">03</div>
+            <h3>The Unscheduled Handshake</h3>
+            <p>
+              B2B matchmaking pre-schedules 200+ meetings. But the real value is
+              the minister who walks your booth, the developer who stops to ask
+              a question, the introducer who connects you to the person you
+              didn't know you needed to meet.
+            </p>
+          </div>
+          <div class="why-card reveal d1">
+            <div class="why-card-num">04</div>
+            <h3>Your Competitor's Alternative</h3>
+            <p>
+              Country pavilions from China, India, UAE, Turkey, Italy, Egypt,
+              Libya, and Ghana are confirmed. If you supply the construction or
+              energy sector and you're not on this floor, your buyers will find
+              your competitors instead.
+            </p>
+          </div>
+        </div>
+
+        <!-- ★ IMAGE PLACEHOLDER: WHY EXHIBIT BANNER ★ -->
+        <div class="why-image-banner reveal">
+          <img
+            src="Image-2.png"
+            alt="Exhibition floor with professionals networking under warm gold lighting"
+          />
+        </div>
+      </div>
+    </section>
+
+    <div class="stripe">
+      <div class="r"></div>
+      <div class="g"></div>
+      <div class="n"></div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+     POWER PLAYERS SPLIT
+     ═══════════════════════════════════════ -->
+    <section class="power-section">
+      <div class="power-split">
+        <!-- ★ IMAGE PLACEHOLDER: GOVERNMENT / MINISTERS ★ -->
+        <div class="power-image reveal">
+          <img
+            src="Image-3.png"
+            alt="Government ministers and policy leaders in executive boardroom"
+          />
+        </div>
+        <div class="power-text reveal">
+          <div class="eyebrow ey-red">The Room That Matters</div>
+          <h2>
+            Government Ministers.<br />Policy Shapers.<br /><span class="gold"
+              >In The Room.</span
+            >
+          </h2>
+          <p>
+            This isn't a trade show where you hope the right person walks by.
+            Senior government officials from Ghana's key ministries — Trade,
+            Energy, Works & Housing — are confirmed participants. The 24-Hour
+            Economy programme has created $2.3 billion in new procurement. The
+            officials directing that spend will be at this event.
+          </p>
+          <p>If you're not in the room, you're not in the conversation.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="stripe">
+      <div class="r"></div>
+      <div class="g"></div>
+      <div class="n"></div>
+    </div>
+
+    <!-- MARKET NUMBERS -->
+    <section class="sec-white" id="market">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow ey-gold">The Market</div>
+          <h2>Ghana By The Numbers</h2>
+          <p>
+            A market with sustained growth, active mega-projects, and a
+            government incentive framework designed to attract international
+            suppliers.
+          </p>
+        </div>
+
+        <!-- ★ IMAGE PLACEHOLDERS: MARKET CONTEXT ★ -->
+        <div class="market-split reveal">
+          <div class="market-image-card">
+            <img
+              src="Image-4A.png"
+              alt="Ghana infrastructure and construction — cranes and modern buildings"
+            />
+          </div>
+          <div class="market-image-card">
+            <img
+              src="Image-4B.png"
+              alt="Energy and power generation — solar panels and transmission towers"
+            />
+          </div>
+        </div>
+
+        <div class="market-grid">
+          <div class="market-card reveal d1">
+            <div class="market-card-val">$87.6B</div>
+            <div class="market-card-unit">GDP</div>
+            <div class="market-card-desc">
+              Projected GDP with 5.8% growth rate
+            </div>
+          </div>
+          <div class="market-card reveal d2">
+            <div class="market-card-val">$12.7B</div>
+            <div class="market-card-unit">Construction</div>
+            <div class="market-card-desc">
+              Construction market growing 5%+ annually
+            </div>
+          </div>
+          <div class="market-card reveal d3">
+            <div class="market-card-val">13%+</div>
+            <div class="market-card-unit">Energy Growth</div>
+            <div class="market-card-desc">Annual energy demand growth</div>
+          </div>
+          <div class="market-card reveal d1">
+            <div class="market-card-val">50</div>
+            <div class="market-card-unit">Industrial Parks</div>
+            <div class="market-card-desc">
+              Being built under the 24-Hour Economy programme
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INCENTIVES AS SALES TOOL -->
+    <section class="sec-gold" id="incentives">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow ey-green">Your Closing Argument</div>
+          <h2>The Incentives That Make Your Product Irresistible.</h2>
+          <p>
+            Ghana's 24-Hour Economy programme doesn't just attract buyers — it
+            gives them a financial framework that makes saying yes to your
+            product dramatically easier.
+          </p>
+        </div>
+        <div class="incentive-pitch reveal">
+          <h3>
+            When Your Buyer Knows The Government Is Subsidising Their Purchase,
+            Your Booth Becomes A Closing Table.
+          </h3>
+          <p>
+            Every conversation on the exhibition floor happens inside this
+            context: Ghana is actively incentivising the exact investments your
+            products serve. That transforms your pitch from "here's what we
+            sell" to "here's what you save."
+          </p>
+          <ul class="incentive-list">
+            <li>
+              <span class="il-val">50%</span>
+              <span
+                >Corporate Income Tax rebate for companies operating 24-hour
+                shifts — your buyer's operating costs drop by half on the tax
+                line</span
+              >
+            </li>
+            <li>
+              <span class="il-val">100%</span>
+              <span
+                >Import duty and VAT waiver on machinery and equipment — your
+                product lands at a fraction of the usual cost</span
+              >
+            </li>
+            <li>
+              <span class="il-val">30%</span>
+              <span
+                >Infrastructure tax credit for private investment in roads,
+                solar, and terminals — your buyer's project gets a 30%
+                write-off</span
+              >
+            </li>
+            <li>
+              <span class="il-val">15%</span>
+              <span
+                >Tax rebate for clean energy and bioenergy investment — solar
+                and renewable equipment becomes even more attractive</span
+              >
+            </li>
+          </ul>
+          <p>
+            You're not just selling a product. You're selling a product inside a
+            government-backed incentive framework that makes the math
+            irresistible for every buyer on the floor.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="stripe">
+      <div class="r"></div>
+      <div class="g"></div>
+      <div class="n"></div>
+    </div>
+
+    <!-- BUYER PROFILE -->
+    <section class="sec-white">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow ey-red">Who Walks Your Booth</div>
+          <h2>The Buyer Profile</h2>
+          <p>
+            Two co-located exhibitions, each drawing a distinct but overlapping
+            set of qualified decision-makers.
+          </p>
+        </div>
+        <div class="buyer-cols reveal">
+          <div class="buyer-col abs">
+            <h3>Africa Build Show Visitors</h3>
+            <ul class="buyer-list">
+              <li>Building contractors & general contractors</li>
+              <li>Property developers & real estate firms</li>
+              <li>Architects & consulting engineers</li>
+              <li>Government infrastructure procurement</li>
+              <li>Construction equipment distributors</li>
+              <li>Free zone operators</li>
+              <li>Project management companies</li>
+              <li>Interior designers & fit-out firms</li>
+            </ul>
+          </div>
+          <div class="buyer-col mega">
+            <h3>Megawatt Africa Visitors</h3>
+            <ul class="buyer-list">
+              <li>Independent Power Producers (IPPs)</li>
+              <li>Municipal utility owners</li>
+              <li>Plant engineers & operators</li>
+              <li>Fuel suppliers & design engineers</li>
+              <li>Solar installers & EPC contractors</li>
+              <li>Energy consultants & strategic investors</li>
+              <li>Government energy officials</li>
+              <li>Industrial buyers needing captive power</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COUNTRIES -->
+    <section class="sec-surface">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow ey-gold">International Presence</div>
+          <h2>Confirmed Country Pavilions</h2>
+          <p>
+            International exhibitors and country delegations already confirmed
+            for the exhibition floor.
+          </p>
+        </div>
+        <div class="country-flags reveal">
+          <div class="country-chip">
+            <span class="cflag">🇨🇳</span> China — Machinery, building materials,
+            solar
+          </div>
+          <div class="country-chip">
+            <span class="cflag">🇮🇳</span> India — Engineering, electrical, IT
+          </div>
+          <div class="country-chip">
+            <span class="cflag">🇦🇪</span> UAE — Construction, investment, real
+            estate
+          </div>
+          <div class="country-chip">
+            <span class="cflag">🇹🇷</span> Turkey — Steel, equipment,
+            infrastructure
+          </div>
+          <div class="country-chip">
+            <span class="cflag">🇮🇹</span> Italy — Luxury finishes, machinery
+          </div>
+          <div class="country-chip">
+            <span class="cflag">🇪🇬</span> Egypt — Construction, energy, trade
+          </div>
+          <div class="country-chip">
+            <span class="cflag">🇱🇾</span> Libya — Energy, infrastructure
+          </div>
+          <div class="country-chip">
+            <span class="cflag">🇬🇭</span> Ghana — All sectors
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stripe">
+      <div class="r"></div>
+      <div class="g"></div>
+      <div class="n"></div>
+    </div>
+
+    <!-- BOOTH PACKAGES -->
+    <section class="sec-white" id="booths">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="eyebrow ey-green">Exhibit</div>
+          <h2>Stand Options</h2>
+          <p>
+            Multiple configurations available. B2B matchmaking included with all
+            exhibitor packages.
+          </p>
+        </div>
+        <div class="booth-grid">
+          <div class="booth-card reveal d1">
+            <div class="booth-card-type">Shell Scheme</div>
+            <ul>
+              <li>Pre-built stand with walls & fascia</li>
+              <li>Furniture & lighting included</li>
+              <li>Power connection</li>
+              <li>Company listing in directory</li>
+              <li>B2B matchmaking access</li>
+              <li>Ideal for first-time exhibitors</li>
+            </ul>
+            <a
+              href="https://reg.meetby.net/absghana2026-exhibitor"
+              class="booth-card-cta"
+              >Enquire →</a
+            >
+          </div>
+          <div class="booth-card featured reveal d2">
+            <div class="booth-card-type">Raw Space — Custom Build</div>
+            <ul>
+              <li>Open floor space for custom design</li>
+              <li>Maximum brand visibility</li>
+              <li>Power & utilities access</li>
+              <li>Premium directory listing</li>
+              <li>B2B matchmaking access</li>
+              <li>Best for experienced exhibitors</li>
+            </ul>
+            <a
+              href="https://reg.meetby.net/absghana2026-exhibitor"
+              class="booth-card-cta"
+              >Enquire →</a
+            >
+          </div>
+          <div class="booth-card reveal d3">
+            <div class="booth-card-type">Premium Corner Position</div>
+            <ul>
+              <li>High-traffic corner placement</li>
+              <li>Two open sides for visibility</li>
+              <li>Enhanced power allocation</li>
+              <li>Featured directory placement</li>
+              <li>Priority B2B scheduling</li>
+              <li>Limited availability</li>
+            </ul>
+            <a
+              href="https://reg.meetby.net/absghana2026-exhibitor"
+              class="booth-card-cta"
+              >Enquire →</a
+            >
+          </div>
+        </div>
+
+        <!-- ★ IMAGE PLACEHOLDER: BOOTH / EXHIBITION FLOOR ★ -->
+        <div class="booth-image-banner reveal">
+          <img
+            src="Image-5.png"
+            alt="Exhibition floor with professional booth displays and warm lighting"
+          />
+        </div>
+      </div>
+    </section>
+
+    <div class="stripe">
+      <div class="r"></div>
+      <div class="g"></div>
+      <div class="n"></div>
+    </div>
+
+    <!-- FINAL CTA -->
+    <section class="sec-cta" id="cta">
+      <div class="cta-bg"><img src="Image-6.png" alt="" /></div>
+      <div class="cta-overlay"></div>
+      <div class="container">
+        <div class="eyebrow ey-white" style="justify-content: center">
+          <span class="star star-gold star-sm"></span>July 7–9, 2026
+        </div>
+        <h2>
+          Your Buyers Are Registering. Your Competitors Are Booking.
+          <span class="red">Where Are You?</span>
+        </h2>
+        <p>
+          Limited stands remain across Africa Build Show and Megawatt Africa.
+          Contact the team today.
+        </p>
+        <div class="cta-btns">
+          <a
+            href="https://reg.meetby.net/absghana2026-exhibitor"
+            class="btn-cta-a"
+            ><span class="star star-white star-sm"></span> Book Your Stand →</a
+          >
+          <a
+            href="https://reg.meetby.net/gitwghana2026-visitor"
+            class="btn-cta-green"
+            >Register to Attend</a
+          >
+          <a href="#" class="btn-cta-b">Download Floor Plan</a>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="cc-label">Local Inquiries</div>
+            <div class="cc-name">Edmund Frimpong</div>
+            <div class="cc-role">COO - Geovision Services, Accra, Ghana</div>
+            <div class="cc-detail">
+              Phone: +233 24 552 9467<br />Email:
+              <a href="mailto:edmund@geovisionservices.com"
+                >edmund@geovisionservices.com</a
+              >
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="cc-label">International Inquiries</div>
+            <div class="cc-name">Shraddha Tawde</div>
+            <div class="cc-role">Project Manager — MIE Events DMCC</div>
+            <div class="cc-detail">
+              Mob: +971 55 482 1580<br />Email:
+              <a href="mailto:shraddha.tawde@mieevents.com"
+                >shraddha.tawde@mieevents.com</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+     <div class="footer-bar">
+  <a href="https://reg.meetby.net/gitwghana2026-visitor">
+  <img src="GITW-logo.png" alt="GITW 2026" />
+</a>
+<a href="https://reg.meetby.net/absghana2026-visitor">
+  <img src="africabuildshow-logo.png" alt="Africa Build Show" />
+</a>
+<a href="https://reg.meetby.net/megawattghana2026-exhibitor">
+  <img src="Megawatt-logo.png" alt="Megawatt Africa" />
+</a>
+ 
+</div>
+      <p>Ghana Investment & Trade Week 2026 · 7th Edition</p>
+      <p>
+        Organised by <a href="https://www.mieevents.com">MIE Events DMCC</a> ·
+        Strategic Partner: Ghana Chamber of Construction Industry
+      </p>
+      <p><a href="https://www.gitwsummit.com">www.gitwsummit.com</a></p>
+    </footer>
+
+    <script>
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("visible");
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+      window.addEventListener("scroll", () => {
+        document.getElementById("nav").style.boxShadow =
+          window.scrollY > 30 ? "0 2px 20px rgba(0,0,0,0.1)" : "none";
+      });
+    </script>
+  </body>
+</html>
