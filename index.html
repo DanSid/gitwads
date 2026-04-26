@@ -3,19 +3,1337 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GITW Ads</title>
-    <meta
-      http-equiv="refresh"
-      content="0; url=./GITW_2026_AB_Ad_Layouts%20(1).html"
-    />
-    <script>
-      window.location.replace("./GITW_2026_AB_Ad_Layouts%20(1).html");
-    </script>
+    <title>GITW 2026 — A/B Ad Layouts</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: #f5f4f0;
+        color: #1a1a1a;
+        padding: 24px;
+        min-height: 100vh;
+      }
+      .header {
+        max-width: 1100px;
+        margin: 0 auto 24px;
+        padding: 0 8px;
+      }
+      .header h1 {
+        font-size: 22px;
+        font-weight: 600;
+        color: #1a2a3c;
+        margin-bottom: 2px;
+      }
+      .header p {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 20px;
+      }
+      .tabs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 14px;
+      }
+      .tab {
+        padding: 7px 16px;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        background: #fff;
+        font-size: 12px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.15s;
+        font-family: inherit;
+        color: #555;
+      }
+      .tab.active {
+        background: #1a2a3c;
+        color: #f5c842;
+        border-color: #2d3e52;
+      }
+      .tab:hover:not(.active) {
+        background: #eee;
+      }
+      .platforms {
+        display: flex;
+        gap: 6px;
+        margin-bottom: 0;
+      }
+      .plat {
+        padding: 6px 16px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        background: #fff;
+        font-size: 12px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.15s;
+        font-family: inherit;
+        color: #555;
+      }
+      .plat.active {
+        background: #fef7e0;
+        color: #9a6e00;
+        border-color: #e6c84a;
+      }
+      .plat:hover:not(.active) {
+        background: #eee;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 8px;
+      }
+      @media (max-width: 740px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .col-label {
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: #888;
+        margin-bottom: 8px;
+      }
+      .creative-card {
+        background: #fff;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        overflow: hidden;
+      }
+      .placeholder {
+        background: linear-gradient(
+          135deg,
+          #d4dbed 0%,
+          #e8edf5 40%,
+          #f0f3f7 100%
+        );
+        padding: 24px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border-top: 1.5px dashed #8ca3bf;
+        border-bottom: 1.5px dashed #8ca3bf;
+      }
+      .placeholder svg {
+        opacity: 0.7;
+      }
+      .placeholder .img-desc {
+        font-size: 11px;
+        color: #4a607a;
+        text-align: center;
+        line-height: 1.5;
+        max-width: 90%;
+        font-style: italic;
+      }
+      .placeholder .img-spec {
+        font-size: 10px;
+        color: #2d507a;
+        text-align: center;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        background: rgba(26, 42, 60, 0.08);
+        padding: 4px 12px;
+        border-radius: 10px;
+        margin-top: 2px;
+      }
+      .avatar {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: #1a2a3c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .avatar span {
+        color: #f5c842;
+        font-size: 10px;
+        font-weight: 600;
+      }
+      .avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: 50%;
+      }
+      .avatar.sm {
+        width: 28px;
+        height: 28px;
+      }
+      .avatar.sm span {
+        font-size: 9px;
+      }
+      .btn-fb {
+        background: #1877f2;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        padding: 7px 16px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        white-space: nowrap;
+        font-family: inherit;
+      }
+      .btn-ig {
+        background: #0095f6;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 6px 18px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        white-space: nowrap;
+        font-family: inherit;
+      }
+      .btn-rd {
+        background: #ff4500;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        padding: 6px 18px;
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        white-space: nowrap;
+        font-family: inherit;
+      }
+      .btn-li {
+        background: #0a66c2;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        padding: 7px 18px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        white-space: nowrap;
+        font-family: inherit;
+      }
+      .btn-tk {
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 7px 18px;
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
+        white-space: nowrap;
+        font-family: inherit;
+      }
+      .hidden {
+        display: none;
+      }
+      .page-label {
+        font-size: 11px;
+        color: #999;
+        text-align: center;
+        margin-top: 32px;
+        padding-bottom: 8px;
+      }
+      .spec-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px;
+        padding: 7px 12px;
+        background: #f0f2f4;
+        font-size: 10px;
+        color: #4a607a;
+        letter-spacing: 0.2px;
+      }
+      .spec-bar span.dot {
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background: #8ca3bf;
+        display: inline-block;
+      }
+      .single-col .grid {
+        grid-template-columns: 1fr;
+        max-width: 560px;
+      }
+      .note-bar {
+        max-width: 1100px;
+        margin: 0 auto 16px;
+        padding: 8px 16px;
+        background: #fff8e1;
+        border: 1px solid #f0e4b0;
+        border-radius: 8px;
+        font-size: 12px;
+        color: #7a6400;
+        line-height: 1.5;
+      }
+      .note-bar strong {
+        font-weight: 600;
+      }
+      .script-block {
+        background: #fff;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        overflow: hidden;
+      }
+      .script-header {
+        padding: 12px 16px;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .script-header .badge {
+        display: inline-block;
+        padding: 3px 10px;
+        border-radius: 12px;
+        font-size: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .script-header .badge.reel {
+        background: #f0e6ff;
+        color: #7c3aed;
+      }
+      .script-header .badge.tiktok {
+        background: #000;
+        color: #fff;
+      }
+      .script-header .badge.inmail {
+        background: #dbeafe;
+        color: #1e40af;
+      }
+      .script-body {
+        padding: 14px 16px;
+      }
+      .script-body .line {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 8px;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+      .script-body .timestamp {
+        font-weight: 600;
+        color: #1a2a3c;
+        white-space: nowrap;
+        min-width: 48px;
+        font-size: 12px;
+        font-family: "SF Mono", Monaco, Consolas, monospace;
+      }
+      .script-body .direction {
+        color: #444;
+      }
+      .script-body .audio-note {
+        margin-top: 10px;
+        padding: 8px 12px;
+        background: #f7f8fa;
+        border-radius: 6px;
+        font-size: 12px;
+        color: #666;
+        font-style: italic;
+      }
+      .script-body .vibe-note {
+        margin-top: 6px;
+        padding: 8px 12px;
+        background: #fef7e0;
+        border-radius: 6px;
+        font-size: 12px;
+        color: #7a6400;
+      }
+      .visual-dir {
+        padding: 14px 16px;
+        border-top: 1px solid #eee;
+        background: #fafafa;
+      }
+      .visual-dir h4 {
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #888;
+        margin-bottom: 8px;
+      }
+      .visual-dir .slide {
+        font-size: 12px;
+        color: #444;
+        line-height: 1.5;
+        margin-bottom: 4px;
+        padding-left: 8px;
+        border-left: 2px solid #ddd;
+      }
+    </style>
   </head>
   <body>
-    <p>
-      Redirecting to the ad layouts page.
-      <a href="./GITW_2026_AB_Ad_Layouts%20(1).html">Open it here</a>.
-    </p>
+    <div class="header">
+      <h1>GITW 2026 — A/B Ad Layouts</h1>
+      <p>
+        8 A/B tests · 2 variants each · Facebook, Instagram, TikTok, Reddit,
+        LinkedIn · Attendee &amp; Exhibitor audiences
+      </p>
+      <div class="tabs" id="testTabs"></div>
+      <div class="platforms" id="platTabs"></div>
+    </div>
+
+    <div id="noteArea"></div>
+    <div class="grid" id="cardGrid"></div>
+    <p class="page-label">MIE Events DMCC</p>
+
+    <script>
+      const tests = [
+        /* ── FACEBOOK ── */
+        {
+          id: 1,
+          platform: "Facebook",
+          audience: "Attendee",
+          theme: "Relationship Access vs Incentives",
+          adA: {
+            primary:
+              "Three events. Three sectors. One commercial decision.\n\n🏗️ Africa Build Show\u2013 West Africa's premier B2B exhibition for construction technology, building materials, and equipment. If you supply the construction industry, your buyers are here. \n\n ⚡ Megawatt Africa \u2013 The international exhibition for power generation, lighting, and renewable energy. If you supply the energy sector, your buyers are here. \n\n 💼 GITW Summit \u2013 Ghana's premier investment and trade summit at G2G/B2G level. Government officials. CEOs. International investors. The people who make the decisions are in this room.\n\n One free visitor pass unlocks all three events. One exhibitor stand puts your products in front of all three audiences.\n\n 7–9 July 2026 | The Palms Convention Center, Accra, Ghana.Accra\n\n #GITW2026 #AfricaBuildShow #MegawattAfrica #AccraJuly2026 #InvestInGhana #ThePalmsAccra",
+            headline:
+              "$12.7B construction market. 13% energy demand growth. Government ministers in the room. All three. One venue. 7–9 July, Accra. \u2014 GITW 2026",
+            description:
+              "7\u20139 July 2026 | Accra, Ghana | 1,500+ Delegates | 150+ Speakers",
+            cta: "Register Now",
+            image:
+              "Hero shot of executive handshake at an African business summit. Convention centre atrium with warm lighting, VIP lanyards, and national flags. Professional, high-energy, aspirational tone.",
+            imgFile: "creative-a.png",
+          },
+          adB: {
+            primary:
+             "GITW 2026 brings together two international exhibitions and an investment summit under one roof at The Palms Convention Center, Accra.\n\nThe companies already confirmed are from China, India, UAE, Turkey, Italy, Egypt, Libya, and Ghana, exhibiting across Africa Build Show and Megawatt Africa, while government ministers, investors, and CEOs converge at the GITW Investment Summit.\n\n→ $12.7B construction market. Your buyers are at Africa Build Show.\n→ 13% annual energy demand growth. Your buyers are at Megawatt Africa.\n→ 50% tax rebates and full duty waivers. The officials at GITW explain exactly how to use them.\n\nOne platform. Three commercial opportunities. Three days.\n\n7–9 July 2026 | The Palms Convention Center, Accra\n\n#GITW2026 #AfricaBuildShow #MegawattAfrica #AccraJuly2026",
+              headline:
+              "Your competitors from China, India, UAE, Turkey, and Italy are already heading to Accra. Two exhibitions. One investment summit. Are you on the floor plan?",
+            description:
+              "Ghana Investment & Trade Week | The Palms Convention Center",
+            cta: "Register Free",
+            image:
+              "Bold typography-forward creative with key incentive numbers (50%, 30%) as oversized text. Ghana flag colour accents. Clean data-visualization feel. Convention centre imagery faded in background.",
+            imgFile: "creative-b.png",
+          },
+        },
+        {
+          id: 2,
+          platform: "Facebook",
+          audience: "Attendee",
+          theme: "Relationship Access vs Social Proof",
+          adA: {
+            primary:
+              "The deals that shape West Africa don\u2019t start with an email. They start with a handshake.\n\nGhana Investment & Trade Week returns July 7\u20139 at The Palms Convention Center, Accra \u2014 and this year, three powerhouse exhibitions converge under one roof.\n\nThis is where you sit across from the minister implementing the 24-Hour Economy. Where you shake hands with the CEO before the tender drops. Where 200+ pre-matched B2B meetings put you face-to-face with the decision-maker you\u2019ve been chasing for six months.\n\nCEO Top Table sessions. Government delegations. Closed-door conversations. No cameras. Just the people who move markets.\n\n\ud83c\udf9f\ufe0f Free visitor registration. Limited VIP packages.",
+            headline:
+              "$12.7B construction market. 13% energy demand growth. Government ministers in the room. All three. One venue. 7–9 July, Accra. \u2014 GITW 2026",
+            description:
+              "7\u20139 July 2026 | Accra, Ghana | 1,500+ Delegates | 150+ Speakers",
+            cta: "Register Now",
+            image:
+              "Hero shot of executive handshake at an African business summit. Convention centre atrium with warm lighting, VIP lanyards, and national flags. Professional, high-energy, aspirational tone.",
+            imgFile: "creative-a.png",
+          },
+          adB: {
+            primary:
+              "Last year: 1,500+ delegates. 200+ B2B meetings. 3 CEO Top Table sessions. 150+ speakers. 8 countries on the exhibition floor.\n\n2026 is bigger. New venue. Three co-located exhibitions \u2014 construction, energy, and investment \u2014 all at The Palms Convention Center.\n\nGhana\u2019s economy is projected at $87.6 billion. The infrastructure pipeline includes metro rail, a nuclear power plant, 50 industrial parks, and green airports. The people building these projects will be in this room.\n\nWill you?",
+            headline: "8 Countries. 1,500+ Decision-Makers. 3 Days in Accra.",
+            description:
+              "GITW 2026 | July 7\u20139 | Free Visitor Registration",
+            cta: "Register Now",
+            image:
+              "Aerial / wide-angle shot of a packed exhibition hall floor with country pavilion flags and booth activity. Overlaid stat callouts: 1,500+ delegates, 8 countries, 200+ B2B meetings. Event-scale energy.",
+            imgFile: "GEO-AD3.png",
+          },
+        },
+        {
+          id: 3,
+          platform: "Facebook",
+          audience: "Exhibitor",
+          theme: "Positioning Play vs Incentives Sales Tool",
+          adA: {
+            primary:
+              "Buying a booth at GITW 2026 isn\u2019t a marketing expense. It\u2019s a positioning play.\n\nIn West African markets, being physically present at the right event signals you\u2019re serious, funded, and ready to do business. The companies on the exhibition floor are the ones who get introduced to the procurement office, invited to the private dinner, and remembered when the contract is awarded.\n\nAfrica Build Show (construction) and Megawatt Africa (energy) are co-located with the GITW Investment Summit \u2014 triple the foot traffic from a single booth.\n\nCountry pavilions from China, India, UAE, Turkey, Italy, Egypt, Libya, and Ghana. If your competitors are exhibiting and you\u2019re not, your buyers will find them instead.\n\n\ud83d\udce9 Book your stand today.",
+            headline: "Your Competitors Are Already On The Floor Plan",
+            description:
+              "Exhibit at GITW 2026 | July 7\u20139 | The Palms, Accra",
+            cta: "Enquire Now",
+            image:
+              "Exhibition floor with branded booths, country pavilion flags, and professional visitors. Shot from slightly elevated angle showing scale and activity. Business-forward, competitive energy.",
+            imgFile: "GEO-AD4.png",
+          },
+          adB: {
+            primary:
+              "Ghana is waiving import duties on machinery. Offering 50% corporate tax rebates. Backing infrastructure investment with 30% tax credits.\n\nThat means your buyers have an incentive framework that makes your product easier to say yes to.\n\nA booth at Africa Build Show or Megawatt Africa puts you face-to-face with the contractors, developers, IPP owners, and government officials who are actively spending \u2014 inside a market worth $12.7B in construction alone.\n\n200+ structured B2B meetings. 1,500+ qualified delegates. Government procurement officials walking the floor.\n\nThe incentives make the math work. Your booth is where the handshake happens.",
+            headline:
+              "Your Buyers Get 50% Tax Rebates. Sell Them The Solution.",
+            description:
+              "Africa Build Show & Megawatt Africa | Co-located at GITW 2026",
+            cta: "Book Your Stand",
+            image:
+              "Split creative: one side shows incentive data points (50%, duty waivers, 30% credits) in bold typography; other side shows a B2B meeting handshake at a booth. Business-meets-data aesthetic.",
+            imgFile: "GEO-AD5.png",
+          },
+        },
+
+        /* ── INSTAGRAM ── */
+        {
+          id: 4,
+          platform: "Instagram",
+          audience: "Attendee",
+          theme: "Feed Carousel vs Reel",
+          type: "mixed",
+          adA: {
+            primary:
+              "The deals that shape Africa don\u2019t start with an email. They start with a handshake. \u270b\ud83c\udffe\n\nGITW 2026. July 7\u20139. The Palms Convention Center, Accra.\n\nCEO Top Table sessions \u2014 closed-door, no cameras.\n200+ pre-matched B2B meetings.\nGovernment delegations at ministerial level.\nThe officials implementing Ghana\u2019s 24-Hour Economy \u2014 in person.\n\n50% tax rebates. Full import duty waivers. 30% infrastructure credits.\n\nBut incentives go to the people who know the details. Who know the right officials. Who were in the room.\n\nThis is the room. \ud83d\udead\n\nLink in bio to register free.\n\n#GITW2026 #AfricaBuildShow #MegawattAfrica #InvestInGhana #AccraJuly2026 #24HourEconomy #AfricaBusiness #GhanaTrade",
+            headline: "GITW 2026 \u2014 The Room Where Deals Get Made",
+            description: "Register free \u2014 link in bio",
+            cta: "Learn More",
+            image:
+              "Carousel (5 slides):\n1 \u2014 Bold text: \u201cThe Room Where Deals Get Made\u201d \u2014 dark bg, gold accent, GITW logo\n2 \u2014 \u201cCEO Top Table. Closed-door. No cameras.\u201d \u2014 executive roundtable imagery\n3 \u2014 \u201c50% Tax Rebates. Duty Waivers. 30% Credits.\u201d \u2014 large numbers, Ghana flag colours\n4 \u2014 \u201c1,500+ Decision-Makers. 8 Countries. 3 Days.\u201d \u2014 event floor energy\n5 \u2014 Dates + venue + \u201cRegister Free\u201d CTA \u2014 all 3 show logos",
+            format: "Carousel \u2014 5 slides",
+            imgFile: "creative-a.png",
+          },
+          adB: {
+            type: "reel",
+            script: [
+              {
+                time: "0\u20133s",
+                dir: "Text on screen: \u201cWhy do the biggest deals in West Africa happen at GITW?\u201d",
+              },
+              {
+                time: "3\u20137s",
+                dir: "Quick cuts: handshakes, closed-door meetings, VIP arrivals",
+              },
+              {
+                time: "7\u201312s",
+                dir: "VO or text: \u201cBecause in African markets, relationships come before contracts.\u201d",
+              },
+              {
+                time: "12\u201318s",
+                dir: "Text overlays: \u201cCEO Top Table \u2014 closed-door\u201d / \u201c200+ B2B meetings\u201d / \u201cGovernment delegations\u201d",
+              },
+              {
+                time: "18\u201324s",
+                dir: "Text overlays: \u201c50% tax rebates / duty waivers / 30% infrastructure credits\u201d",
+              },
+              {
+                time: "24\u201328s",
+                dir: "Text: \u201cThe incentives are real. But only for the people in the room.\u201d",
+              },
+              {
+                time: "28\u201330s",
+                dir: "End card: GITW 2026 | July 7\u20139 | Register free \u2014 link in bio",
+              },
+            ],
+            audio: "Upbeat Afrobeats instrumental, building energy",
+            format: "Reel \u2014 30 seconds",
+          },
+        },
+        {
+          id: 5,
+          platform: "Instagram",
+          audience: "Exhibitor",
+          theme: "Feed Carousel vs Reel",
+          type: "mixed",
+          adA: {
+            primary:
+              "Your competitors are already on the floor plan. \ud83d\udccd\n\nAfrica Build Show + Megawatt Africa at GITW 2026.\nJuly 7\u20139. The Palms Convention Center, Accra.\n\nCountry pavilions: \ud83c\udde8\ud83c\uddf3 \ud83c\uddee\ud83c\uddf3 \ud83c\udde6\ud83c\uddea \ud83c\uddf9\ud83c\uddf7 \ud83c\uddee\ud83c\uddf9 \ud83c\uddea\ud83c\uddec \ud83c\uddf1\ud83c\uddfe \ud83c\uddec\ud83c\udded\n\nYour booth puts you inside a $12.7B construction market and Africa\u2019s fastest-growing energy sector. The visitors aren\u2019t casual browsers \u2014 they\u2019re contractors, developers, IPP owners, and government procurement officials with active projects.\n\nAnd when your buyer knows that Ghana is waiving import duties and offering 50% tax rebates on the equipment you\u2019re selling? That\u2019s not a pitch. That\u2019s a close.\n\nLimited stands remaining. Link in bio.\n\n#AfricaBuildShow #MegawattAfrica #GITW2026 #ExhibitInGhana #WestAfricaTrade",
+            headline: "Exhibit at GITW 2026",
+            description: "Limited stands remaining",
+            cta: "Learn More",
+            image:
+              "Exhibition booth hero shot with country flags and professional visitor foot traffic. Bold, editorial crop. Business energy with international scale.",
+            imgFile: "GEO-AD4.png",
+          },
+          adB: {
+            type: "reel",
+            script: [
+              {
+                time: "0\u20133s",
+                dir: "Text: \u201cStill thinking about exhibiting at GITW 2026?\u201d",
+              },
+              {
+                time: "3\u20136s",
+                dir: "Cut to exhibition floor \u2014 busy, international, professional",
+              },
+              {
+                time: "6\u201310s",
+                dir: "Text: \u201cYour competitors already booked. China. India. UAE. Turkey. Italy.\u201d",
+              },
+              {
+                time: "10\u201315s",
+                dir: "Text: \u201c$12.7B construction market. 13% energy demand growth.\u201d",
+              },
+              {
+                time: "15\u201320s",
+                dir: "Cut to B2B meeting, handshake. Text: \u201cThe minister walks your booth. The developer sees your product.\u201d",
+              },
+              {
+                time: "20\u201325s",
+                dir: "Text: \u201cDuty waivers. 50% tax rebates. The math works for your buyers.\u201d",
+              },
+              {
+                time: "25\u201328s",
+                dir: "Text: \u201cBut only if they find YOU \u2014 not your competitor.\u201d",
+              },
+              {
+                time: "28\u201330s",
+                dir: "End card: Book your stand | Link in bio",
+              },
+            ],
+            audio:
+              "High-energy exhibition floor ambience transitioning to confident beat",
+            format: "Reel \u2014 30 seconds",
+          },
+        },
+
+        /* ── TIKTOK ── */
+        {
+          id: 6,
+          platform: "TikTok",
+          audience: "Attendee",
+          theme: "Trend-style vs Education hook",
+          type: "video",
+          adA: {
+            script: [
+              {
+                time: "0\u20132s",
+                dir: "POV: You staring at your phone. Text: \u201cSending another cold email to a West African buyer \ud83d\udce7\u201d",
+              },
+              {
+                time: "2\u20134s",
+                dir: "Cut \u2014 strike-through on text. New text: \u201cOR\u2026\u201d",
+              },
+              {
+                time: "4\u20138s",
+                dir: "Quick cuts: private jet landing, convention centre, handshakes, VIP badges",
+              },
+              {
+                time: "8\u201312s",
+                dir: "Text overlay: \u201cWalking into the same room as the minister, the CEO, and your next $2M deal\u201d",
+              },
+              {
+                time: "12\u201318s",
+                dir: "Rapid text: \u201cCEO Top Table \u2014 no cameras\u201d / \u201c200+ matched B2B meetings\u201d / \u201c50% tax rebates explained by the people who wrote them\u201d",
+              },
+              {
+                time: "18\u201322s",
+                dir: "Text: \u201cGhana. July 7\u20139. The room where it happens.\u201d",
+              },
+              {
+                time: "22\u201325s",
+                dir: "End: \u201cFree registration. Link in bio. \ud83c\uddec\ud83c\udded\u201d",
+              },
+            ],
+            audio:
+              "Trending Afrobeats sound or \u201cboss arrival\u201d audio trend",
+            vibe: "Aspirational but not corporate. Energy of \u201cif you know, you know.\u201d",
+            format: "15\u201325 seconds \u2014 native feel",
+          },
+          adB: {
+            script: [
+              {
+                time: "0\u20133s",
+                dir: "Face to camera or text: \u201cGhana\u2019s government is basically paying companies to invest and nobody\u2019s talking about it\u201d",
+              },
+              {
+                time: "3\u20137s",
+                dir: "Text overlays rapid-fire: \u201c50% corporate tax rebate \u2705\u201d / \u201cFull import duty waiver \u2705\u201d / \u201c30% infrastructure tax credit \u2705\u201d / \u201c12% interest concessional loans \u2705\u201d",
+              },
+              {
+                time: "7\u201312s",
+                dir: "\u201cBut here\u2019s the thing \u2014 these incentives go to the people who understand the details.\u201d",
+              },
+              {
+                time: "12\u201316s",
+                dir: "\u201cAnd the people who understand the details are the ones in the room when the officials explain them.\u201d",
+              },
+              {
+                time: "16\u201320s",
+                dir: "Show event footage / text: \u201cGITW 2026 \u2014 July 7\u20139, Accra\u201d",
+              },
+              {
+                time: "20\u201323s",
+                dir: "\u201cFree to attend. The connections are priceless.\u201d",
+              },
+            ],
+            audio: "Storytelling/explainer audio trend",
+            vibe: "Informative, slightly provocative opening. Education-to-CTA pipeline.",
+            format: "15\u201323 seconds \u2014 education hook",
+          },
+        },
+        {
+          id: 7,
+          platform: "TikTok",
+          audience: "Exhibitor",
+          theme: "FOMO-driven (single concept)",
+          type: "video-single",
+          adA: {
+            script: [
+              {
+                time: "0\u20133s",
+                dir: "Text: \u201cPOV: You didn\u2019t exhibit at GITW 2026\u201d",
+              },
+              {
+                time: "3\u20136s",
+                dir: "Show competitor\u2019s busy booth, handshakes, deals happening",
+              },
+              {
+                time: "6\u20139s",
+                dir: "Text: \u201cYour competitor just met the procurement minister\u201d",
+              },
+              {
+                time: "9\u201312s",
+                dir: "Text: \u201cThey\u2019re explaining how Ghana\u2019s duty waivers make their product 40% cheaper\u201d",
+              },
+              {
+                time: "12\u201315s",
+                dir: "Text: \u201cThe developer just placed an order. At the booth. Not yours.\u201d",
+              },
+              {
+                time: "15\u201318s",
+                dir: "Cut to empty space. Text: \u201cThis could have been your stand.\u201d",
+              },
+              {
+                time: "18\u201322s",
+                dir: "Reverse \u2014 busy booth, your logo. Text: \u201cBook your stand. July 7\u20139. Accra.\u201d",
+              },
+              {
+                time: "22\u201325s",
+                dir: "End: \u201cDon\u2019t let your competitor be the only one in the room. Link in bio.\u201d",
+              },
+            ],
+            audio: "Dramatic reveal sound trending",
+            vibe: "FOMO-driven. Competitive pressure. Quick emotional arc from loss to action.",
+            format: "22\u201325 seconds \u2014 FOMO narrative",
+          },
+        },
+
+        /* ── REDDIT ── */
+        {
+          id: 8,
+          platform: "Reddit",
+          audience: "Attendee",
+          theme: "Data-driven investor angle vs Practical supplier angle",
+          adA: {
+            primary:
+              "If you\u2019re looking at African markets \u2014 specifically West Africa \u2014 the math on Ghana right now is hard to ignore.\n\n$87.6B GDP, 5.8% growth rate. A $12.7B construction market with metro rail, a nuclear power plant, 50 industrial parks, and green airports in the pipeline. AfCFTA headquarters in Accra \u2014 gateway to 1.3 billion consumers.\n\nAnd the incentive package under the 24-Hour Economy programme: 50% CIT rebates for extended operations, full import duty and VAT waivers on machinery, up to 30% infrastructure tax credits, and concessional loans at 12%.\n\nBut anyone who\u2019s done business in Africa knows: the incentives go to the people with relationships. The ones who were in the room when the policy was explained. The ones who shook hands before the tender was published.\n\nGhana Investment & Trade Week (GITW) runs July 7\u20139 in Accra. 1,500+ delegates. 200+ structured B2B meetings. CEO Top Table sessions (closed-door, no cameras). Government delegations at ministerial level.\n\nFree visitor registration. Three co-located exhibitions covering construction, energy, and investment.",
+            headline:
+              "Ghana is offering 50% tax rebates and full duty waivers to attract investors. GITW 2026 is where you meet the officials handing them out.",
+            description:
+              "r/business \u00b7 r/africa \u00b7 r/investing \u00b7 r/entrepreneur",
+            cta: "Register Here",
+            image:
+              "Infographic-style creative: Ghana macro-economic data points (GDP, growth rate, pipeline projects) arranged in a clean, data-driven layout. Map of Ghana with Accra highlighted. No-nonsense, Reddit-native.",
+            imgFile: "GEO-RD-1.png",
+          },
+          adB: {
+            primary:
+              "GITW 2026 in Accra, Ghana (July 7\u20139) co-locates three B2B exhibitions: Africa Build Show (construction/building materials), Megawatt Africa (power generation/energy), and the GITW Investment Summit.\n\nWhy it matters if you\u2019re a manufacturer or supplier:\n\nGhana\u2019s construction market is $12.7B. Energy demand is growing 13% annually. The government\u2019s 24-Hour Economy programme is building 50 industrial parks, metro rail, green airports, and a nuclear power plant. These are active projects with budgets.\n\nThe people at this event aren\u2019t browsing \u2014 they\u2019re contractors, developers, IPP owners, government procurement officials, and free zone operators. Country pavilions from China, India, UAE, Turkey, Italy, Egypt, Libya, and Ghana.\n\nAnd here\u2019s the closer for your sales conversations: Ghana is waiving import duties on equipment, offering 50% tax rebates, and backing infrastructure investment with 30% tax credits. Your product just became significantly cheaper for every buyer on that floor.\n\nBooth packages available. B2B matchmaking included.",
+            headline:
+              "If you manufacture building materials, power equipment, or industrial machinery \u2014 West Africa\u2019s biggest buyer event is in July.",
+            description:
+              "r/smallbusiness \u00b7 r/entrepreneur \u00b7 r/supplychain",
+            cta: "Enquire About Exhibiting",
+            image:
+              "Exhibition floor wide shot showing international booths, country pavilion banners, and active B2B engagement. Professional, real-event photography feel. Scale and legitimacy.",
+            imgFile: "GEO-RD-2.png",
+          },
+        },
+
+        /* ── LINKEDIN ── */
+        {
+          id: 9,
+          platform: "LinkedIn",
+          audience: "Attendee",
+          theme: "Long-form authority vs Concise urgency",
+          adA: {
+            primary:
+              "In West Africa, the companies that win contracts aren\u2019t always the ones with the best product.\n\nThey\u2019re the ones who were in the room. Who shook hands with the decision-maker before the RFP was published. Who understood the incentive framework because the minister explained it to them directly.\n\nGhana Investment & Trade Week 2026 is that room.\n\nJuly 7\u20139 at The Palms Convention Center, Accra. Three co-located exhibitions \u2014 Africa Build Show (construction), Megawatt Africa (energy), and the GITW Investment Summit \u2014 bringing together 1,500+ delegates from 8+ countries.\n\nWhat makes GITW different from a conference:\n\u2192 CEO Top Table \u2014 closed-door sessions between heads of organisations. No cameras. No audience. Just decision-makers.\n\u2192 200+ pre-matched B2B meetings \u2014 you don\u2019t wander the floor hoping. You sit across from the person you need.\n\u2192 Government delegations \u2014 the officials implementing Ghana\u2019s 24-Hour Economy programme, explaining Fund24 incentives directly.\n\nThose incentives: 50% CIT rebates for companies operating 24 hours. Full import duty and VAT waivers on machinery. Up to 30% infrastructure tax credits. Concessional finance at 12%.\n\nGhana\u2019s GDP is projected at $87.6 billion. The infrastructure pipeline \u2014 metro rail, nuclear power, 50 industrial parks, green airports \u2014 represents billions in procurement. The AfCFTA secretariat sits in Accra, making this the continental gateway.\n\nThe people who capture these opportunities will be the ones in the room in July.\n\nFree visitor registration. VIP and delegate packages available.\n\n#GITW2026 #InvestInGhana #AfricaBusiness #24HourEconomy",
+            headline:
+              "In African Markets, Access Is Everything. This Is Where You Get It.",
+            description: "Sponsored Content \u2014 Long-form",
+            cta: "Register Now",
+            image:
+              "Executive-tier creative: dark background, gold typography, GITW 2026 branding. Silhouette of a boardroom or summit table. Authority, exclusivity, gravitas.",
+            imgFile: "GEO-LK-1.png",
+          },
+          adB: {
+            primary:
+              "Ghana\u2019s 24-Hour Economy programme has created one of the most competitive incentive frameworks in West Africa.\n\nBut incentives don\u2019t go to the best-qualified applicant. They go to the best-connected one.\n\nGITW 2026 puts you in the same room as the officials, the investors, and the project developers who are shaping Ghana\u2019s $87.6B economy.\n\nCEO Top Table sessions. 200+ B2B meetings. Government delegations. Three co-located exhibitions covering construction, energy, and investment.\n\nJuly 7\u20139. The Palms Convention Center, Accra.\n\nThe question isn\u2019t whether these opportunities are real. It\u2019s whether you\u2019ll be in the room to capture them.",
+            headline:
+              "50% Tax Rebates. Duty Waivers. 30% Credits. The Officials Explaining Them Will Be In Accra July 7\u20139.",
+            description: "Sponsored Content \u2014 Concise",
+            cta: "Register Free",
+            image:
+              "Clean, modern layout: key incentive figures in large sans-serif type against a deep navy background. GITW 2026 logo and date lockup. Professional, LinkedIn-native aesthetic.",
+            imgFile: "GEO-LK-2.png",
+          },
+        },
+        {
+          id: 10,
+          platform: "LinkedIn",
+          audience: "Exhibitor",
+          theme: "Sponsored Content vs InMail",
+          type: "mixed-li",
+          adA: {
+            primary:
+              "Country pavilions from China, India, UAE, Turkey, Italy, Egypt, Libya, and Ghana are confirmed for GITW 2026.\n\nIf you manufacture or supply construction materials, power generation equipment, renewable energy systems, lighting, or industrial machinery \u2014 and you\u2019re not on this floor \u2014 your competitors will be the ones shaking hands with your buyers.\n\nAfrica Build Show (4th edition) and Megawatt Africa (3rd edition) are co-located with the GITW Investment Summit. That means your booth gets foot traffic from three exhibitions simultaneously: contractors and developers from construction, IPP owners and plant engineers from energy, and government officials and investors from the summit.\n\nThe visitor profile: qualified buyers with active projects, backed by a government incentive framework (50% tax rebates, duty waivers, 30% infrastructure credits) that makes your product easier to say yes to.\n\n$12.7B construction market. 13% annual energy demand growth. 1,500+ delegates. 200+ structured B2B meetings.\n\nLimited stands available.",
+            headline:
+              "Your Next West African Buyer Is Walking An Exhibition Floor In Accra This July. Will They Find Your Booth \u2014 Or Your Competitor\u2019s?",
+            description: "Sponsored Content",
+            cta: "Enquire About Exhibiting",
+            image:
+              "Exhibition hall with prominent country pavilion flags and busy aisles. Professional, wide-angle. Emphasises international scale and foot traffic volume.",
+            imgFile: "GEO-LK-3.png",
+          },
+          adB: {
+            type: "inmail",
+            subject:
+              "Your booth at Africa\u2019s biggest construction & energy exhibition \u2014 July 7\u20139, Accra",
+            body: "Hi [Name],\n\nQuick question: if your ideal West African buyer \u2014 a contractor with a government-backed infrastructure project, import duty waivers on equipment, and a 50% tax rebate incentive \u2014 was walking an exhibition floor this July, would you want to be on it?\n\nGITW 2026 in Accra co-locates Africa Build Show (construction) and Megawatt Africa (energy) with the GITW Investment Summit. Country pavilions from 8 nations. 1,500+ delegates. 200+ B2B meetings.\n\nBooth packages and B2B matchmaking available.\n\nHappy to send the exhibitor prospectus if useful.\n\n[Your name]\nMIE Events DMCC",
+            format: "Sponsored InMail / Message Ad",
+          },
+        },
+      ];
+
+      const platforms = [
+        "Facebook",
+        "Instagram",
+        "TikTok",
+        "Reddit",
+        "LinkedIn",
+      ];
+      let curTest = 0,
+        curPlat = "Facebook";
+
+      const imgSvg =
+        '<svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="2" y="6" width="32" height="24" rx="3" stroke="#6b809e" stroke-width="1.5" fill="none"/><circle cx="12" cy="15" r="3" stroke="#6b809e" stroke-width="1.2" fill="none"/><path d="M4 26l8-8 5 5 4-3 11 6" stroke="#6b809e" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+      const vidSvg =
+        '<svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="2" y="6" width="32" height="24" rx="3" stroke="#6b809e" stroke-width="1.5" fill="none"/><polygon points="15,12 25,18 15,24" stroke="#6b809e" stroke-width="1.2" fill="none" stroke-linejoin="round"/></svg>';
+
+      const platSpecs = {
+        Facebook: {
+          label: "Facebook Feed Ad",
+          ratio: "4:5",
+          px: "1080 \u00d7 1350 px",
+          format: "JPG / PNG",
+          maxSize: "30 MB max",
+          aspect: "4/5",
+        },
+        Instagram: {
+          label: "Instagram Feed Ad",
+          ratio: "4:5",
+          px: "1080 \u00d7 1350 px",
+          format: "JPG / PNG",
+          maxSize: "30 MB max",
+          aspect: "4/5",
+        },
+        TikTok: {
+          label: "TikTok In-Feed Ad",
+          ratio: "9:16",
+          px: "1080 \u00d7 1920 px",
+          format: "MP4 / MOV",
+          maxSize: "500 MB max",
+          aspect: "9/16",
+        },
+        Reddit: {
+          label: "Reddit Promoted Post",
+          ratio: "4:5",
+          px: "1080 \u00d7 1350 px",
+          format: "JPG / PNG",
+          maxSize: "3 MB max",
+          aspect: "4/5",
+          extra: "Thumbnail: 400 \u00d7 300 px (4:3)",
+        },
+        LinkedIn: {
+          label: "LinkedIn Sponsored Content",
+          ratio: "1.91:1",
+          px: "1200 \u00d7 627 px",
+          format: "JPG / PNG",
+          maxSize: "5 MB max",
+          aspect: "1.91/1",
+        },
+      };
+
+      function nl2br(s) {
+        return s.replace(/\n/g, "<br>");
+      }
+
+      function brandAvatar(sm) {
+        return (
+          '<div class="avatar' +
+          (sm ? " sm" : "") +
+          '"><img src="logo.png" alt="Ghana Investment & Trade Week icon"></div>'
+        );
+      }
+
+      function ctaButton(btnClass, label, link) {
+        if (link) {
+          return (
+            '<a href="' +
+            link +
+            '" class="' +
+            btnClass +
+            '" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center">' +
+            label +
+            "</a>"
+          );
+        }
+        return '<button class="' + btnClass + '">' + label + "</button>";
+      }
+
+      function placeholder(desc, plat, isVideo, imgFile) {
+        const s = platSpecs[plat];
+        let specText =
+          s.ratio +
+          " ratio \u00b7 " +
+          s.px +
+          " \u00b7 " +
+          s.format +
+          " \u00b7 " +
+          s.maxSize;
+        if (s.extra) specText += "\n" + s.extra;
+        if (imgFile) {
+          return (
+            '<div style="position:relative;background:#f7f4ed;display:flex;align-items:center;justify-content:center;padding:10px"><img src="' +
+            imgFile +
+            '" alt="' +
+            desc.replace(/"/g, "&quot;").substring(0, 80) +
+            '" style="width:100%;height:auto;object-fit:contain;display:block"></div>'
+          );
+        }
+        return (
+          '<div class="placeholder" style="aspect-ratio:' +
+          s.aspect +
+          ';max-height:400px">' +
+          (isVideo ? vidSvg : imgSvg) +
+          '<p class="img-desc">' +
+          desc +
+          "</p>" +
+          '<span class="img-spec">' +
+          specText +
+          "</span>" +
+          "</div>"
+        );
+      }
+
+      function specBar(plat) {
+        const s = platSpecs[plat];
+        let parts = [
+          s.label,
+          "Ratio: " + s.ratio,
+          "Size: " + s.px,
+          s.format,
+          s.maxSize,
+        ];
+        if (s.extra) parts.push(s.extra);
+        return (
+          '<div class="spec-bar">' +
+          parts.join(' <span class="dot"></span> ') +
+          "</div>"
+        );
+      }
+
+      function facebookAd(ad) {
+        return (
+          '<div class="creative-card">' +
+          '<div style="padding:12px 14px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #eee">' +
+          brandAvatar(false) +
+          '<div><p style="font-size:13px;font-weight:600;color:#1c1e21">Ghana Investment & Trade Week</p><p style="font-size:11px;color:#65676b">MIE sponsored \u00b7 \ud83c\udf10</p></div>' +
+          "</div>" +
+          '<div style="padding:8px 14px 12px"><p style="font-size:13.5px;line-height:1.55;color:#1c1e21">' +
+          nl2br(ad.primary) +
+          "</p></div>" +
+          placeholder(ad.image, "Facebook", false, ad.imgFile) +
+          specBar("Facebook") +
+          '<div style="padding:10px 14px;border-top:1px solid #eee;display:flex;align-items:center;justify-content:space-between;background:#f7f8fa">' +
+          '<div style="flex:1;min-width:0"><p style="font-size:11px;color:#65676b;text-transform:uppercase;letter-spacing:.3px">gitw.com.gh</p><p style="margin-top:2px;font-size:14px;font-weight:600;color:#1c1e21">' +
+          ad.headline +
+          '</p><p style="margin-top:1px;font-size:12px;color:#65676b">' +
+          ad.description +
+          "</p></div>" +
+          ctaButton("btn-fb", ad.cta, ad.ctaLink) +
+          "</div></div>"
+        );
+      }
+
+      function instagramAd(ad) {
+        return (
+          '<div class="creative-card">' +
+          '<div style="padding:10px 14px;display:flex;align-items:center;justify-content:space-between">' +
+          '<div style="display:flex;align-items:center;gap:10px">' +
+          brandAvatar(true) +
+          '<div><p style="font-size:13px;font-weight:600;color:#262626">gitwghana</p><p style="font-size:10px;color:#8e8e8e">Sponsored</p></div>' +
+          "</div>" +
+          '<span style="color:#262626;font-size:16px;letter-spacing:2px">\u00b7\u00b7\u00b7</span>' +
+          "</div>" +
+          placeholder(
+            ad.image,
+            "Instagram",
+            !!ad.format && ad.format.includes("Carousel"),
+            ad.imgFile,
+          ) +
+          specBar("Instagram") +
+          '<div style="padding:10px 14px 4px;display:flex;gap:14px">' +
+          '<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" stroke="#262626" stroke-width="1.5" fill="none"/></svg>' +
+          '<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2v10z" stroke="#262626" stroke-width="1.5" fill="none"/></svg>' +
+          '<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="#262626" stroke-width="1.5" fill="none"/></svg>' +
+          '<div style="flex:1"></div>' +
+          '<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M19 21l-7-4-7 4V5a2 2 0 012-2h10a2 2 0 012 2v16z" stroke="#262626" stroke-width="1.5" fill="none"/></svg>' +
+          "</div>" +
+          '<div style="padding:6px 14px 8px"><p style="font-size:13px;color:#262626;line-height:1.5"><strong>gitwghana</strong> ' +
+          nl2br(ad.primary) +
+          "</p></div>" +
+          '<div style="padding:6px 14px 10px;border-top:1px solid #efefef;display:flex;align-items:center;justify-content:space-between">' +
+          '<div style="min-width:0"><p style="font-size:13px;font-weight:600;color:#262626">' +
+          ad.headline +
+          '</p><p style="margin-top:2px;font-size:11px;color:#8e8e8e">' +
+          ad.description +
+          "</p></div>" +
+          ctaButton("btn-ig", ad.cta, ad.ctaLink) +
+          "</div></div>"
+        );
+      }
+
+      function tiktokAd(ad) {
+        return (
+          '<div class="creative-card">' +
+          '<div style="padding:12px 14px;display:flex;align-items:center;justify-content:space-between;background:#0f0f10;color:#fff">' +
+          '<div style="display:flex;align-items:center;gap:10px">' +
+          brandAvatar(true) +
+          '<div><p style="font-size:13px;font-weight:600;color:#fff">gitwghana</p><p style="font-size:10px;color:#c9c9c9">Sponsored</p></div>' +
+          "</div>" +
+          '<span style="font-size:16px;letter-spacing:2px;color:#fff">\u00b7\u00b7\u00b7</span>' +
+          "</div>" +
+          '<div style="padding:10px 14px 12px;background:#17181a"><p style="font-size:13.5px;line-height:1.55;color:#f5f5f5">' +
+          nl2br(ad.primary) +
+          "</p></div>" +
+          placeholder(ad.image, "TikTok", false, ad.imgFile) +
+          specBar("TikTok") +
+          '<div style="padding:12px 14px;border-top:1px solid #2a2b2f;display:flex;align-items:center;justify-content:space-between;background:#111214">' +
+          '<div style="flex:1;min-width:0"><p style="font-size:14px;font-weight:700;color:#fff">' +
+          ad.headline +
+          '</p><p style="margin-top:2px;font-size:12px;color:#bfc3c7">' +
+          ad.description +
+          "</p></div>" +
+          ctaButton("btn-tk", ad.cta, ad.ctaLink) +
+          "</div></div>"
+        );
+      }
+
+      function redditAd(ad) {
+        return (
+          '<div class="creative-card">' +
+          '<div style="padding:10px 14px 6px;display:flex;align-items:center;gap:8px">' +
+          brandAvatar(true) +
+          '<span style="font-size:12px;font-weight:600;color:#1a1a1b">u/GITWGhana</span>' +
+          '<span style="font-size:11px;color:#7c7c7c">\u00b7 Promoted</span>' +
+          "</div>" +
+          '<div style="padding:0 14px 8px"><p style="font-size:15px;font-weight:600;color:#1a1a1b;line-height:1.35">' +
+          ad.headline +
+          "</p></div>" +
+          placeholder(ad.image, "Reddit", false, ad.imgFile) +
+          specBar("Reddit") +
+          '<div style="padding:10px 14px"><p style="font-size:13px;color:#1a1a1b;line-height:1.5">' +
+          nl2br(ad.primary) +
+          "</p></div>" +
+          '<div style="padding:6px 14px 10px;border-top:1px solid #edeff1;display:flex;align-items:center;justify-content:space-between">' +
+          '<p style="font-size:11px;color:#7c7c7c">' +
+          ad.description +
+          "</p>" +
+          ctaButton("btn-rd", ad.cta, ad.ctaLink) +
+          "</div></div>"
+        );
+      }
+
+      function linkedinAd(ad) {
+        return (
+          '<div class="creative-card">' +
+          '<div style="padding:12px 14px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #eee">' +
+          brandAvatar(false) +
+          '<div><p style="font-size:13px;font-weight:600;color:#000">Ghana Investment & Trade Week</p><p style="font-size:11px;color:#666">1,200 followers \u00b7 Promoted</p></div>' +
+          "</div>" +
+          '<div style="padding:8px 14px 12px"><p style="font-size:13.5px;line-height:1.55;color:#000">' +
+          nl2br(ad.primary) +
+          "</p></div>" +
+          placeholder(ad.image, "LinkedIn", false, ad.imgFile) +
+          specBar("LinkedIn") +
+          '<div style="padding:10px 14px;border-top:1px solid #eee;display:flex;align-items:center;justify-content:space-between;background:#f9fafb">' +
+          '<div style="flex:1;min-width:0"><p style="font-size:14px;font-weight:600;color:#000">' +
+          ad.headline +
+          '</p><p style="margin-top:2px;font-size:12px;color:#666">' +
+          ad.description +
+          "</p></div>" +
+          ctaButton("btn-li", ad.cta, ad.ctaLink) +
+          "</div></div>"
+        );
+      }
+
+      function scriptCard(data, label, badgeClass) {
+        let html = '<div class="script-block">';
+        html +=
+          '<div class="script-header"><span class="badge ' +
+          badgeClass +
+          '">' +
+          label +
+          "</span>";
+        if (data.format)
+          html +=
+            '<span style="font-size:11px;color:#888;margin-left:auto">' +
+            data.format +
+            "</span>";
+        html += '</div><div class="script-body">';
+        data.script.forEach(function (s) {
+          html +=
+            '<div class="line"><span class="timestamp">[' +
+            s.time +
+            ']</span><span class="direction">' +
+            s.dir +
+            "</span></div>";
+        });
+        if (data.audio)
+          html +=
+            '<div class="audio-note">\ud83c\udfb5 Audio: ' +
+            data.audio +
+            "</div>";
+        if (data.vibe)
+          html +=
+            '<div class="vibe-note">\ud83c\udfaf Vibe: ' + data.vibe + "</div>";
+        html += "</div></div>";
+        return html;
+      }
+
+      function inmailCard(data) {
+        let html = '<div class="script-block">';
+        html +=
+          '<div class="script-header"><span class="badge inmail">InMail</span>';
+        if (data.format)
+          html +=
+            '<span style="font-size:11px;color:#888;margin-left:auto">' +
+            data.format +
+            "</span>";
+        html += "</div>";
+        html +=
+          '<div style="padding:10px 16px;background:#f0f4f8;border-bottom:1px solid #e2e8f0"><p style="font-size:11px;color:#666;margin-bottom:2px">Subject</p><p style="font-size:14px;font-weight:600;color:#000">' +
+          data.subject +
+          "</p></div>";
+        html +=
+          '<div class="script-body"><p style="font-size:13px;color:#333;line-height:1.6;white-space:pre-line">' +
+          data.body +
+          "</p></div>";
+        html += "</div>";
+        return html;
+      }
+
+      function getTestsForPlatform(plat) {
+        const baseTests = tests.filter(function (t) {
+          return t.platform === "Facebook";
+        });
+        if (plat === "Facebook") {
+          return baseTests.map(function (t) {
+            return {
+              id: t.id,
+              platform: t.platform,
+              audience: t.audience,
+              theme: t.theme,
+              adA: {
+                primary: t.adA.primary,
+                headline: t.adA.headline,
+                description: t.adA.description,
+                cta: t.adA.cta,
+                ctaLink:
+                  t.adA.cta === "Register Now" ||
+                  t.adA.cta === "Enquire Now"
+                    ? "gitw_exhibitor_landing.html"
+                    : "",
+                image: t.adA.image,
+                imgFile: "creative-a.png",
+              },
+              adB: {
+                primary: t.adB.primary,
+                headline: t.adB.headline,
+                description: t.adB.description,
+                cta: t.adB.cta,
+                image: t.adB.image,
+                imgFile: "creative-b.png",
+              },
+            };
+          });
+        }
+        return baseTests.map(function (t) {
+          return {
+            id: t.id + "-" + plat.toLowerCase(),
+            platform: plat,
+            audience: t.audience,
+            theme: t.theme,
+            adA: {
+              primary: t.adA.primary,
+              headline: t.adA.headline,
+              description: t.adA.description,
+              cta: t.adA.cta,
+              ctaLink:
+                t.adA.cta === "Register Now" ||
+                t.adA.cta === "Enquire Now"
+                  ? "gitw_exhibitor_landing.html"
+                  : "",
+              image: t.adA.image,
+              imgFile: "creative-a.png",
+            },
+            adB: {
+              primary: t.adB.primary,
+              headline: t.adB.headline,
+              description: t.adB.description,
+              cta: t.adB.cta,
+              image: t.adB.image,
+              imgFile: "creative-b.png",
+            },
+          };
+        });
+      }
+
+      function render() {
+        var platTests = getTestsForPlatform(curPlat);
+        if (curTest >= platTests.length) curTest = 0;
+        var test = platTests[curTest];
+
+        // render tabs
+        var tabsEl = document.getElementById("testTabs");
+        tabsEl.innerHTML = "";
+        platTests.forEach(function (t, i) {
+          var b = document.createElement("button");
+          b.className = "tab" + (i === curTest ? " active" : "");
+          var label = t.audience + ": " + t.theme;
+          b.textContent = label;
+          b.onclick = function () {
+            curTest = i;
+            render();
+          };
+          tabsEl.appendChild(b);
+        });
+
+        // render platform tabs
+        document.querySelectorAll(".plat").forEach(function (p) {
+          p.classList.toggle("active", p.textContent === curPlat);
+        });
+
+        var noteArea = document.getElementById("noteArea");
+        noteArea.innerHTML = "";
+        var gridEl = document.getElementById("cardGrid");
+
+        // Handle different test types
+        if (test.type === "video") {
+          // Both A and B are video scripts (TikTok)
+          noteArea.innerHTML =
+            '<div class="note-bar" style="max-width:1100px"><strong>Video Ads</strong> — Both variants are video scripts with timestamped direction. No static image creative.</div>';
+          gridEl.innerHTML =
+            '<div><p class="col-label">Ad A \u2014 ' +
+            test.adA.format +
+            "</p>" +
+            scriptCard(test.adA, "TikTok", "tiktok") +
+            "</div>" +
+            '<div><p class="col-label">Ad B \u2014 ' +
+            test.adB.format +
+            "</p>" +
+            scriptCard(test.adB, "TikTok", "tiktok") +
+            "</div>";
+        } else if (test.type === "video-single") {
+          // Single video concept (TikTok Exhibitor)
+          noteArea.innerHTML =
+            '<div class="note-bar" style="max-width:1100px"><strong>Single Concept</strong> — This audience has one video ad concept. Use as baseline; create a variant for A/B testing from the same script with modified hooks or pacing.</div>';
+          gridEl.innerHTML =
+            '<div><p class="col-label">Ad A \u2014 ' +
+            test.adA.format +
+            "</p>" +
+            scriptCard(test.adA, "TikTok", "tiktok") +
+            "</div>" +
+            '<div><p class="col-label">Ad B \u2014 Variant TBD</p><div class="creative-card" style="padding:40px 20px;text-align:center;color:#999;font-size:13px;line-height:1.6"><p>Create a variant from the Ad A script.<br>Suggested test variables: opening hook, pacing, end-card CTA, or audio selection.</p></div></div>';
+        } else if (test.type === "mixed") {
+          // One static + one reel (Instagram)
+          var staticSide, reelSide;
+          if (test.adA.type === "reel") {
+            staticSide =
+              '<div><p class="col-label">Ad B \u2014 Feed Carousel</p>' +
+              instagramAd(test.adB) +
+              "</div>";
+            reelSide =
+              '<div><p class="col-label">Ad A \u2014 Reel</p>' +
+              scriptCard(test.adA, "Reel", "reel") +
+              "</div>";
+            gridEl.innerHTML = reelSide + staticSide;
+          } else {
+            staticSide =
+              '<div><p class="col-label">Ad A \u2014 ' +
+              (test.adA.format || "Feed Post") +
+              "</p>" +
+              instagramAd(test.adA) +
+              "</div>";
+            reelSide =
+              '<div><p class="col-label">Ad B \u2014 Reel</p>' +
+              scriptCard(test.adB, "Reel", "reel") +
+              "</div>";
+            gridEl.innerHTML = staticSide + reelSide;
+          }
+          noteArea.innerHTML =
+            '<div class="note-bar" style="max-width:1100px"><strong>Format Test</strong> — Ad A is a static/carousel feed post; Ad B is a 30-second Reel script. Tests creative format performance within the same audience.</div>';
+        } else if (test.type === "mixed-li") {
+          // LinkedIn: one sponsored content + one InMail
+          noteArea.innerHTML =
+            '<div class="note-bar" style="max-width:1100px"><strong>Format Test</strong> — Ad A is Sponsored Content (feed); Ad B is a Sponsored InMail / Message Ad. Tests delivery format within the same audience.</div>';
+          gridEl.innerHTML =
+            '<div><p class="col-label">Ad A \u2014 Sponsored Content</p>' +
+            linkedinAd(test.adA) +
+            "</div>" +
+            '<div><p class="col-label">Ad B \u2014 Sponsored InMail</p>' +
+            inmailCard(test.adB) +
+            "</div>";
+        } else {
+          // Standard A/B (same format, different copy)
+          var renderAd;
+          if (curPlat === "Facebook") renderAd = facebookAd;
+          else if (curPlat === "Instagram") renderAd = instagramAd;
+          else if (curPlat === "TikTok") renderAd = tiktokAd;
+          else if (curPlat === "Reddit") renderAd = redditAd;
+          else if (curPlat === "LinkedIn") renderAd = linkedinAd;
+          else renderAd = facebookAd;
+          gridEl.innerHTML =
+            '<div><p class="col-label">Ad A</p>' +
+            renderAd(test.adA) +
+            "</div>" +
+            '<div><p class="col-label">Ad B</p>' +
+            renderAd(test.adB) +
+            "</div>";
+        }
+      }
+
+      // Build platform tabs
+      var platEl = document.getElementById("platTabs");
+      platforms.forEach(function (p) {
+        var b = document.createElement("button");
+        b.className = "plat";
+        b.textContent = p;
+        b.onclick = function () {
+          curPlat = p;
+          curTest = 0;
+          render();
+        };
+        platEl.appendChild(b);
+      });
+
+      render();
+    </script>
   </body>
 </html>
