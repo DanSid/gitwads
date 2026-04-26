@@ -58,12 +58,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,
 .hero-bg-image img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.45) 0%,rgba(0,0,0,0.1) 30%,rgba(0,0,0,0.05) 50%,rgba(0,0,0,0.3) 75%,rgba(0,0,0,0.6) 100%);z-index:1}
 .hero-body{position:relative;z-index:2;flex:1;max-width:1160px;width:100%;margin:0 auto;padding:0 28px;min-height:calc(100vh - 62px - 72px);display:flex;flex-direction:column}
-.hero-headlines{display:grid;grid-template-columns:minmax(280px,1fr) minmax(360px,460px);align-items:start;justify-content:space-between;width:100%;padding-top:36px;flex:0;margin-bottom:0;gap:48px}
-.hero-h1-left{font-size:clamp(38px,5vw,64px);font-weight:900;color:var(--white);letter-spacing:-.01em;text-shadow:0 2px 16px rgba(0,0,0,0.5),0 1px 3px rgba(0,0,0,0.3)}
+.hero-headlines{display:grid;grid-template-columns:minmax(360px,1.05fr) auto minmax(430px,520px);align-items:start;justify-content:space-between;width:100%;padding-top:36px;flex:0;margin-bottom:0;gap:28px}
+.hero-h1-left{font-size:clamp(38px,5vw,64px);font-weight:900;color:var(--white);letter-spacing:-.01em;text-shadow:0 2px 16px rgba(0,0,0,0.5),0 1px 3px rgba(0,0,0,0.3);transform:translateX(-72px)}
 .hero-h1-right{font-size:clamp(38px,5vw,64px);font-weight:900;color:var(--gold);letter-spacing:-.01em;text-align:right;text-shadow:0 2px 16px rgba(0,0,0,0.5),0 1px 3px rgba(0,0,0,0.3)}
-.hero-right-content{display:flex;flex-direction:column;align-items:flex-end;gap:16px}
-.hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:var(--white);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:7px 14px;border-radius:2px;width:fit-content}
-.hero-p{font-size:15px;color:var(--white);line-height:1.7;max-width:420px;margin:0;text-shadow:0 1px 10px rgba(0,0,0,0.6),0 1px 3px rgba(0,0,0,0.4);font-weight:500;background:rgba(0,0,0,0.38);padding:18px 20px;border:1px solid rgba(255,255,255,0.14);border-radius:8px;text-align:left;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.hero-middle{display:flex;justify-content:center;align-items:flex-start;padding-top:92px}
+.hero-right-content{display:flex;flex-direction:column;align-items:flex-end;gap:22px;justify-self:end;padding-top:12px;transform:translateX(112px)}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:var(--white);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:7px 18px;border-radius:2px;width:max-content;white-space:nowrap}
+.hero-p{font-size:15px;color:var(--white);line-height:1.8;max-width:500px;margin:0;text-shadow:0 1px 10px rgba(0,0,0,0.6),0 1px 3px rgba(0,0,0,0.4);font-weight:500;background:rgba(0,0,0,0.42);padding:20px 22px;border:1px solid rgba(255,255,255,0.14);border-radius:8px;text-align:left;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
 .hero-lower{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;padding-bottom:20px}
 .hero-cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:center;margin-bottom:16px}
 .hero-right{display:flex;flex-direction:row;gap:10px;justify-content:center;flex-wrap:wrap}
@@ -235,9 +236,10 @@ footer a:hover{color:var(--gold)}
 /* ════ RESPONSIVE ════ */
 @media(max-width:900px){
   .hero-headlines{grid-template-columns:1fr;gap:24px;text-align:center;margin-bottom:48px}
-  .hero-h1-left{text-align:center}
+  .hero-h1-left{text-align:center;transform:none}
   .hero-h1-right{text-align:center}
-  .hero-right-content{align-items:center}
+  .hero-middle{padding-top:0}
+  .hero-right-content{align-items:center;transform:none}
   .hero-p{text-align:center}
   .hero-right{flex-wrap:wrap}
   .results-inner{grid-template-columns:1fr}
@@ -297,10 +299,12 @@ footer a:hover{color:var(--gold)}
 
   <div class="hero-body">
     <div class="hero-headlines">
-      <h1 class="hero-h1-left">The Deals Are<br>Being Made.</h1>
+      <h1 class="hero-h1-left">The Deals&nbsp;Are<br>Being Made.</h1>
+      <div class="hero-middle">
+        <div class="hero-tag"><span class="star star-gold star-sm"></span> Exhibitor Opportunities — Limited Stands</div>
+      </div>
       <div class="hero-right-content">
         <h1 class="hero-h1-right">Your Booth<br>Is Empty.</h1>
-        <div class="hero-tag"><span class="star star-gold star-sm"></span> Exhibitor Opportunities — Limited Stands</div>
         <p class="hero-p">Ghana's government ministers, infrastructure developers, and energy buyers are gathering at one venue — July 7–9, 2026. The companies on the floor are the ones signing contracts. The question isn't whether to exhibit. It's whether you can afford not to.</p>
       </div>
     </div>
